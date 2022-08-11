@@ -1,0 +1,26 @@
+.slider__item {
+	min-width: 100%;
+	height: 800px;
+}
+/* .slider__item-01 {
+	background: linear-gradient(
+			rgba(29, 29, 144, 0.65),
+			rgba(29, 29, 144, 0.65) 39, 39, 100, 0.65 
+		),
+		url("../../assets/images/kunta.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+} */
+
+.hero__slider {
+	overflow: hidden;
+	z-index: 10;
+}
+.slider__content {
+	padding-top: 150px;
+}
+.slider__content h1 {
+	font-size: 3.2rem;
+	font-weight: 600;
+}
