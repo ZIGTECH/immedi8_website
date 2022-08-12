@@ -1,8 +1,4 @@
 .main__navbar.active {
-	background: linear-gradient(
-		90deg,
-		rgb(66, 2, 194) 0%,
-		rgb(0, 78, 194) 100%
-	);
-	color: black;
+	/* background: rgb(52, 52, 127); */
+	color: red;
 }
