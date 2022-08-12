@@ -91,7 +91,7 @@ export const Services = () => {
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					className="h-20 w-20 text-blue-700"
-					fill="red"
+					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
 					strokeWidth={1}>
@@ -107,7 +107,7 @@ export const Services = () => {
 
 	return (
 		<>
-			<div className="container mx-auto text-white p-20 pt-20 pb-20">
+			<div className="container mx-auto text-white p-32 pt-20 pb-20">
 				<p className="text-2xl text-blue-700 mb-5 ">What We Do</p>
 
 				{/*  */}
@@ -136,22 +136,29 @@ export const Services = () => {
 					data-aos="fade-up"
 					data-aos-duration="3000">
 					{data.map((data, i) => (
-						<div
-							style={style}
-							key={i}
-							className="shadow-2xl p-10 mt-14 transition ease-in transorm sm:hover:scale-105 hover:z-50 rounded ">
-							<p
-								className="mb-10 -ml-16 -mt-20"
-								data-aos="fade-down"
-								data-aos-duration="3000">
-								{data.icon}
-							</p>
-
-							<p className="text-xl font-extrabold mb-3">
-								{data.title}
-							</p>
-							<span className="text-justify">{data.content}</span>
-						</div>
+						<>
+							<div
+								style={style}
+								key={i}
+								className="shadow-2xl w-full h-96 p-10 mt-14 transition duration-500 ease-in-out transorm sm:hover:scale-105 hover:z-50 hover:border rounded-sm cursor-pointer ">
+								<div
+									style={style}
+									className="w-20 mb-5 shaodw-2xl border rounded-[50%] items-center">
+									<p
+										className=""
+										data-aos="fade-down"
+										data-aos-duration="3000">
+										{data.icon}
+									</p>
+								</div>
+								<p className="text-xl font-extrabold mb-3">
+									{data.title}
+								</p>
+								<span className="text-justify">
+									{data.content}
+								</span>
+							</div>
+						</>
 					))}
 				</div>
 			</div>

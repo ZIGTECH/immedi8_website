@@ -4,5 +4,6 @@ module.exports = {
 	theme: {
 		extend: {},
 	},
+	variants: { background: ["active"] },
 	plugins: [],
 };

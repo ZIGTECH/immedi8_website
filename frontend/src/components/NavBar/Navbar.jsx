@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
@@ -47,14 +47,14 @@ const Navbar = () => {
 						Login
 					</span>
 				</div> */}
-				<div className="container mx-auto mt-10">
+				<div className={"container mx-auto mt-10 "}>
 					<div className="flex justify-between align-center p-5">
 						<div className="navigation text-white">
 							{/* <img src={logo} alt="The zigtech logo" /> */}
 							<p className="">Logo</p>
 						</div>
-						<div className="nav__right">
-							<div className="text-xl text-extrabold text-white group menu space-x-7 group-hover:animate-bounce hidden md:block">
+						<div>
+							<div className="text-xl} text-extrabold text-white group menu space-x-7 group-hover:animate-bounce hidden md:block">
 								{navLinks.map((link, i) => (
 									<Link
 										to={link.path}
