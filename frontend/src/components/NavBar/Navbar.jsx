@@ -39,27 +39,24 @@ const Navbar = () => {
 	const MainNav = () => {
 		return (
 			<div className="w-100">
-				{/* <div className="flex justify-end space-x-10">
-					<span className="bg-red-700 pt-1 pb-1 pr-3 pl-3 rounded text-white pr- text-2xl text-bold cursor-pointer hover:animate-bounce">
-						Send
-					</span>
-					<span className="bg-blue-700 pt-1 pb-1 pr-3 pl-3 rounded text-white text-2xl text-bold cursor-pointer hover:animate-bounce">
-						Login
-					</span>
-				</div> */}
-				<div className={"container mx-auto mt-10 "}>
-					<div className="flex justify-between align-center p-5">
-						<div className="navigation text-white">
-							{/* <img src={logo} alt="The zigtech logo" /> */}
-							<p className="">Logo</p>
+				<div className={"container mx-auto"}>
+					<div className="flex justify-between items-center p-5">
+						<div className="navigation text-white ">
+							<img
+								src={logo}
+								alt="The zigtech logo"
+								// className="bg-inherit"
+								width={100}
+							/>
+							{/* <p className="">Logo</p> */}
 						</div>
 						<div>
-							<div className="text-xl} text-extrabold text-white group menu space-x-7 group-hover:animate-bounce hidden md:block">
+							<div className="text-xl text-extrabold text-white group menu space-x-7">
 								{navLinks.map((link, i) => (
 									<Link
 										to={link.path}
 										key={i}
-										className="hover:text-red-700  transition-all">
+										className="hover:translate-y-32  transition-all">
 										{link.display}
 									</Link>
 								))}
@@ -80,12 +77,11 @@ const Navbar = () => {
 								</svg>
 							</div>
 						</div>
-						<div className="flex space-x-14">
-							<span className="bg-red-700 pt-1 pb-1 pr-3 pl-3 rounded text-white pr- text-2xl text-bold cursor-pointer hover:animate-bounce">
-								Send
-							</span>
-							<span className="bg-blue-700 pt-1 pb-1 pr-3 pl-3 rounded text-white text-2xl text-bold cursor-pointer hover:animate-bounce">
-								Login
+						<div>
+							<span className="hover:bg-blue-700 pt-1 pb-1 pr-3 pl-3 rounded text-white text-2xl text-bold cursor-pointer hover:animate-bounce">
+								<a href="http://109.228.55.140/mobile-wallet/admin#">
+									Login
+								</a>{" "}
 							</span>
 						</div>
 					</div>

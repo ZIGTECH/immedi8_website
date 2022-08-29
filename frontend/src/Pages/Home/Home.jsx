@@ -1,14 +1,27 @@
 import React from "react";
 import { About } from "../../components/About/About";
+import { Contact } from "../../components/Contact/Contact";
+import { Footer } from "../../components/Footer/Footer";
+import Maps from "../../components/GoogleMaps/Maps";
 import Header from "../../components/Header/Header";
 import { Highlight } from "../../components/Highhight/Highlight";
+import { Newsletter } from "../../components/Newsletter/Newsletter";
+import { Policy } from "../../components/Policy/Policy";
+import { Products } from "../../components/Products/Products";
+import { Regulators } from "../../components/Regulators/Regulators";
 import { Services } from "../../components/Services/Services";
+import { Testimonials } from "../../components/Testimonials/Testimonials";
+import { Choose } from "../../components/WhyUs/Choose";
 
 const serviceStyle = {
 	background: "#222121",
 };
 const highlightStyle = {
 	background: "#eef4ed",
+};
+
+const contactStyle = {
+	background: "#1c1b1b",
 };
 
 export const Home = () => {
@@ -26,6 +39,41 @@ export const Home = () => {
 
 			<section style={serviceStyle} className="mt-20">
 				<Services />
+			</section>
+
+			{/* <section>
+				<Products />
+			</section>
+
+			<section className="bg-slate-200">
+				<Choose />
+			</section> */}
+
+			<section className="mt-20">
+				<Testimonials />
+			</section>
+
+			<section style={contactStyle}>
+				<Contact />
+			</section>
+			<section className="">
+				<Maps />
+			</section>
+
+			<section
+				className="shadow-5xl border-red-700 border-t-2"
+				style={{
+					backgroundColor: "#f1f3f4",
+				}}>
+				<Regulators />
+			</section>
+
+			<section>
+				<Policy />
+			</section>
+
+			<section>
+				<Footer />
 			</section>
 		</div>
 	);

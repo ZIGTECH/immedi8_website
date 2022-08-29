@@ -8,7 +8,6 @@ import "aos/dist/aos.css";
 const style = {
 	position: "relative",
 	ZIndex: 10,
-	// marginBottom: " 200px",
 };
 
 const Header = () => {
