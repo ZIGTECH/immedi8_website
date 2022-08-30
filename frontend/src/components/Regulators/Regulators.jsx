@@ -61,7 +61,7 @@ export const Regulators = () => {
 
 	return (
 		<>
-			<div className="container mx-auto flex mt-[44rem] mb-10 p-16 gap-10  border-red-700 border-t-2 border-b-2">
+			<div className="container mx-auto flex mt-[43rem] mb-10 p-16 gap-10  border-red-700 border-t-2 border-b-2">
 				{/* REGULATORS */}
 				<div className="regulators">
 					<p

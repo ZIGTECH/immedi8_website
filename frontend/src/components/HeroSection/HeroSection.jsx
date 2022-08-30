@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import videoBg from "../../assets/video/immedi8Video.mp4";
 // import "./hero-section.css";
 
@@ -25,7 +25,7 @@ const videoStyle = {
 const HeroSection = () => {
 	return (
 		<>
-			<div className="hero__slider ">
+			<div className="hero__slider " id="home">
 				<div className="slider__item slider__item-01 mt-0">
 					<div className="relative top-0 left-0 h-full">
 						<div style={videoWrapperStyle} className="vid">
@@ -51,19 +51,23 @@ const HeroSection = () => {
 									data-aos-easing="linear"
 									data-aos-duration="1000">
 									<div className="text-white">
-										<p className="text-blue-300 text-extrabold text-3xl">
-											FINANCE CONSULTING
-										</p>
-										<h1 style={textStyle} className="mt-10">
-											Business Consulting <br /> For
-											Finance.
+										<h1 style={textStyle} className="mt-32">
+											International Money Transfer <br />{" "}
+											WorldWide
 										</h1>
 
-										<div className="flex justify-center align-center pt-10">
+										<div className="flex justify-center align-center pt-20">
 											<button
 												style={buttonStyle}
-												className="btn reserve__btn bg-blue-900 px-10 py-3 text-bold text-slate-50 rounded hover:animate-bounce font-bold">
-												<Link to="#">Discover</Link>
+												className="btn reserve__btn bg-blue-900 px-20 py-3 text-bold text-slate-50 rounded hover:animate-bounce font-bold">
+												<Link
+													to="highlight"
+													spy={true}
+													smooth={true}
+													offset={-150}
+													duration={500}>
+													Discover
+												</Link>
 											</button>
 										</div>
 									</div>

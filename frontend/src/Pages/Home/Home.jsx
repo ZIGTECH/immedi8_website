@@ -43,11 +43,11 @@ export const Home = () => {
 
 			{/* <section>
 				<Products />
-			</section>
+			</section> */}
 
 			<section className="bg-slate-200">
 				<Choose />
-			</section> */}
+			</section>
 
 			<section className="mt-20">
 				<Testimonials />

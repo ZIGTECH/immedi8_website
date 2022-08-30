@@ -1,37 +1,37 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {
 	const navLinks = [
 		{
-			path: "/home",
+			path: "home",
 			display: "Home",
 		},
 		{
-			path: "/#",
+			path: "about",
 			display: "About",
 		},
 		{
-			path: "/#",
+			path: "service",
 			display: "Services",
 		},
 
 		{
-			path: "/products",
+			path: "products",
 			display: "Products",
 		},
 
 		{
-			path: "/contact",
+			path: "contact",
 			display: "Contact ",
 		},
 		{
-			path: "/#",
+			path: "#",
 			display: "Send",
 		},
 		{
-			path: "/#",
+			path: "#",
 			display: "Receive",
 		},
 	];
@@ -45,18 +45,20 @@ const Navbar = () => {
 							<img
 								src={logo}
 								alt="The zigtech logo"
-								// className="bg-inherit"
 								width={100}
 							/>
-							{/* <p className="">Logo</p> */}
 						</div>
 						<div>
 							<div className="text-xl text-extrabold text-white group menu space-x-7">
 								{navLinks.map((link, i) => (
 									<Link
 										to={link.path}
+										spy={true}
+										smooth={true}
+										offset={-150}
+										duration={1500}
 										key={i}
-										className="hover:translate-y-32  transition-all">
+										className="hover:underline-offset-4  transition-all cursor-pointer">
 										{link.display}
 									</Link>
 								))}

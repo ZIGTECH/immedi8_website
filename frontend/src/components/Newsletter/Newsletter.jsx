@@ -15,7 +15,7 @@ export const Newsletter = () => {
 	return (
 		<>
 			<div style={style} className="">
-				<div className="container mx-auto my-auto p-16">
+				<div className="container mx-auto my-auto p-8">
 					<div className="grid grid-cols-2 gap-10 mt-10 items-center">
 						<div className="flex items-center">
 							<img
