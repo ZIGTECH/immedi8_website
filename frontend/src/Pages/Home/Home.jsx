@@ -61,7 +61,7 @@ export const Home = () => {
 			</section>
 
 			<section
-				className="shadow-5xl border-red-700 border-t-2"
+				className="border"
 				style={{
 					backgroundColor: "#f1f3f4",
 				}}>

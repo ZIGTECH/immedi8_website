@@ -13,7 +13,7 @@ export const Highlight = () => {
 	const data = [
 		{
 			id: 2,
-			title: "Money Transfer / International Remittance",
+			title: "Money Transfer",
 			content:
 				"Fast Cash Pickup from our Large Network of Locations, We Provide Payments to our mobile Wallet and in to our  Integrated E-Wallet Partners.",
 			icon: <MdOutlineMoney size={84} />,

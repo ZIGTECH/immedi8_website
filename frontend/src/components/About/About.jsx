@@ -69,7 +69,7 @@ export const About = () => {
 						<h2 className="mb-7">
 							Immedi8 Financial <br /> Service.
 						</h2>
-						<p className="text-justify text-sm leading-relaxed">
+						<p className="text-justify leading-relaxed">
 							We are a Financial Services Institution specializing
 							In Money Services Business, International Remittance
 							(wholesale and retail) and Foreign Exchange &

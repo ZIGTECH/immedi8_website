@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-scroll";
 import videoBg from "../../assets/video/immedi8Video.mp4";
+import { Button } from "@material-tailwind/react";
 // import "./hero-section.css";
 
 const buttonStyle = {
@@ -57,9 +58,11 @@ const HeroSection = () => {
 										</h1>
 
 										<div className="flex justify-center align-center pt-20">
-											<button
+											<Button
 												style={buttonStyle}
-												className="btn reserve__btn bg-blue-900 px-20 py-3 text-bold text-slate-50 rounded hover:animate-bounce font-bold">
+												// color="red"
+												ripple={true}
+												className="btn reserve__btn bg-blue-900 px-20 py-3 text-bold text-slate-50 rounded font-bold">
 												<Link
 													to="highlight"
 													spy={true}
@@ -68,7 +71,7 @@ const HeroSection = () => {
 													duration={500}>
 													Discover
 												</Link>
-											</button>
+											</Button>
 										</div>
 									</div>
 								</div>

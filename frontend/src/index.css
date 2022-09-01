@@ -7,13 +7,16 @@
 	margin: 0;
 	box-sizing: border-box;
 	/* font-family: "Merriweather", serif; */
-	font-family: "Montserrat", sans-serif;
-	/* font-family: "Roboto", sans-serif;
-	font-family: "Source Sans Pro", sans-serif; */
-	height: "100vh";
+	/* font-family: "Montserrat", sans-serif; */
+	font-family: "Roboto", sans-serif;
+	/* font-family: "Source Sans Pro", sans-serif; */
+	/* height: "100vh"; */
 }
 
 h2 {
 	font-size: 2.4rem;
 	font-weight: 600;
+}
+h3 {
+	font-size: 1rem;
 }

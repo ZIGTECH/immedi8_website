@@ -60,3 +60,7 @@
 	background-color: #6574cd; /*.bg-indigo*/
 	color: #f8fafc; /*.text-grey-lightest*/
 }
+.scroller {
+	max-height: 200px;
+	overflow-y: auto;
+}

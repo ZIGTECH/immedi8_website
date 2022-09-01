@@ -33,24 +33,6 @@ export const Services = () => {
 
 	const data = [
 		{
-			id: 1,
-			title: "Bank Deposit (Online)",
-			content: "We Can Deposit in to Over 1,000 Banks Around The World",
-			icon: <MdAccountBalance size={84} />,
-		},
-		{
-			id: 1,
-			title: "Payment Service",
-			content: "We Can Deposit in to Over 1,000 Banks Around The World",
-			icon: <MdPayment size={84} />,
-		},
-		{
-			id: 2,
-			title: "Cash",
-			content: "Fast Cash Pickup from our Large Network of Locations",
-			icon: <MdMoney size={84} />,
-		},
-		{
 			id: 3,
 			title: "Mobile-Wallet (I-Wallet)",
 			content:
@@ -95,6 +77,27 @@ export const Services = () => {
 		},
 	];
 
+	const data2 = [
+		{
+			id: 1,
+			title: "Bank Deposit (Online)",
+			content: "We Can Deposit in to Over 1,000 Banks Around The World",
+			icon: <MdAccountBalance size={84} />,
+		},
+		{
+			id: 1,
+			title: "Payment Service",
+			content: "We Can Deposit in to Over 1,000 Banks Around The World",
+			icon: <MdPayment size={84} />,
+		},
+		{
+			id: 2,
+			title: "Cash",
+			content: "Fast Cash Pickup from our Large Network of Locations",
+			icon: <MdMoney size={84} />,
+		},
+	];
+
 	return (
 		<>
 			<div
@@ -126,6 +129,26 @@ export const Services = () => {
 					className="grid grid-cols-3 gap-10 mt-20"
 					data-aos="fade-up"
 					data-aos-duration="3000">
+					{data2.map((d, i) => (
+						<>
+							<div
+								style={style}
+								key={i}
+								className="group shadow-2xl w-full h-96 p-10 mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
+								<p className="group-hover:text-slate-200 text-xl font-extrabold mb-3">
+									<div
+										style={style}
+										className="group-hover:text-red-700 border-2 rounded-full w-24 mb-5 shadow-2xl items-center">
+										<p className=" p-1">{d.icon}</p>
+									</div>
+									{d.title}
+								</p>
+								<span className="text-justify">
+									{d.content}
+								</span>
+							</div>
+						</>
+					))}
 					{data.map((d, i) => (
 						<>
 							<div

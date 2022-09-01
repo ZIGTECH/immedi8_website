@@ -14,6 +14,7 @@ export const Footer = () => {
 			<div style={style} className="">
 				<Newsletter />
 
+				{/* QUICK LINK */}
 				<div className="container mx-auto border-t-2 border-gray-500 p-16 ">
 					<p
 						className="text-xl font-extrabold mb-10 mt-0 text-gray-300"
@@ -22,25 +23,27 @@ export const Footer = () => {
 						Quick Links
 					</p>
 
-					<div className="grid grid-cols-5 gap-3">
+					{/* NAV LINKS */}
+					<div className="grid grid-cols-4 gap-3 ml-20">
 						<div className="cursor-pointer">
 							<ul className="tracking-widest text-gray-400">
 								<li className="hover:underline">About</li>
-								<li className="mt-2 hover:underline">Why Us</li>
 								<li className="mt-2 hover:underline">
-									Contact Us
+									Services
 								</li>
 								<li className="mt-2 hover:underline">
-									Our Network
+									Products
 								</li>
 								<li className="mt-2 hover:underline">
-									Our Platform
+									Contact
 								</li>
 								<li className="mt-2 hover:underline">
-									Our Media
+									Send Money
 								</li>
+								<li className="mt-2 hover:underline">Rates</li>
 							</ul>
 						</div>
+						{/*  */}
 						<div className="cursor-pointer">
 							<ul className="tracking-widest text-gray-400">
 								<li className="hover:underline">
@@ -63,49 +66,41 @@ export const Footer = () => {
 								</li>
 							</ul>
 						</div>
-						<div className="cursor-pointer">
-							<ul className="tracking-widest text-gray-400">
-								<li className="hover:underline">Send</li>
-								<li className="mt-2 hover:underline">
-									Receive
-								</li>
-								<li className="mt-2 hover:underline">Pay</li>
-								<li className="mt-2 hover:underline">Loan</li>
-								<li className="mt-2 hover:underline">Insure</li>
-							</ul>
-						</div>
+						{/*  */}
+
+						{/*  */}
 						<div className="cursor-pointer text-gray-400">
 							<ul className="tracking-widest">
-								<li className="hover:underline">I-Remit</li>
-								<li className="mt-2 hover:underline">I-Pay</li>
-								<li className="mt-2 hover:underline">I-Fx</li>
+								<li className="hover:underline">
+									Bank Deposit (Online)
+								</li>
+								<li className="mt-2 hover:underline">
+									Payment Service
+								</li>
+								<li className="mt-2 hover:underline">Cash</li>
+								<li className="mt-2 hover:underline">BNPL</li>
+							</ul>
+						</div>
+						{/*  */}
+						<div className="cursor-pointer">
+							<ul className="tracking-widest text-gray-400">
 								<li className="mt-2 hover:underline">
 									I-Wallet
 								</li>
-							</ul>
-						</div>
-						<div className="cursor-pointer">
-							<ul className="tracking-widest text-gray-400">
+								<li className="mt-2 hover:underline">I-Loan</li>
 								<li className="hover:underline">I-Market</li>
+								<li className="mt-2 hover:underline">I-FX</li>
 								<li className="mt-2 hover:underline">
-									I-Voucher
+									I-Top-Ups
 								</li>
 								<li className="mt-2 hover:underline">
-									I-Travel
-								</li>
-								<li className="mt-2 hover:underline">
-									I-Events
-								</li>
-								<li className="mt-2 hover:underline">
-									I-FundGlobal
-								</li>
-								<li className="mt-2 hover:underline">
-									ZigTech (Fintech)
+									I-Power
 								</li>
 							</ul>
 						</div>
 					</div>
 
+					{/* BOTTOM FOOTER */}
 					<hr class="my-6 border-gray-500 sm:mx-auto dark:border-gray-700 lg:my-8" />
 					<div class="sm:flex sm:items-center sm:justify-between">
 						<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
