@@ -43,11 +43,11 @@ export const Home = () => {
 
 			{/* <section>
 				<Products />
-			</section>
+			</section> */}
 
 			<section className="bg-slate-200">
 				<Choose />
-			</section> */}
+			</section>
 
 			<section className="mt-20">
 				<Testimonials />
@@ -61,7 +61,7 @@ export const Home = () => {
 			</section>
 
 			<section
-				className="shadow-5xl border-red-700 border-t-2"
+				className="border"
 				style={{
 					backgroundColor: "#f1f3f4",
 				}}>

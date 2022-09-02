@@ -4,8 +4,14 @@ import "aos/dist/aos.css";
 // import { Boxes } from "../Boxes/Boxes";
 // import { HiCurrencyDollar } from "react-icons/hi";
 // import { BsBank } from "react-icons/bs";
-import { MdAccountBalance, MdMoney, MdOutlinePayments } from "react-icons/md";
+import {
+	MdAccountBalance,
+	MdMoney,
+	MdOutlinePayments,
+	MdPayment,
+} from "react-icons/md";
 import { MdSendToMobile } from "react-icons/md";
+import { ifx, iwallet, iloan, ilease, ipower, itop } from "../../assets/main";
 
 const style = {
 	background: "#2f2f2f",
@@ -27,36 +33,76 @@ export const Services = () => {
 
 	const data = [
 		{
+			id: 3,
+			title: "Mobile-Wallet (I-Wallet)",
+			content:
+				"We Provide Payments to our mobile Wallet and in to our  Integrated E-Wallet Partners.",
+			icon: iwallet,
+		},
+
+		{
+			id: 4,
+			title: "Micro Lending (I-Loan)",
+			content:
+				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+			icon: iloan,
+		},
+		{
+			id: 5,
+			title: "BNPL - Buy Now / Pay Later (I-Lease)",
+			content:
+				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+			icon: ilease,
+		},
+		{
+			id: 6,
+			title: "Currency Dealings (I-Fx)",
+			content:
+				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+			icon: ifx,
+		},
+		{
+			id: 7,
+			title: "Mobile Top-Ups (I-TopUp)",
+			content:
+				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+			icon: itop,
+		},
+		{
+			id: 8,
+			title: "Electricity Purchase (I-Power)",
+			content:
+				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+			icon: ipower,
+		},
+	];
+
+	const data2 = [
+		{
 			id: 1,
-			title: "Bank Deposit Online",
+			title: "Bank Deposit (Online)",
 			content: "We Can Deposit in to Over 1,000 Banks Around The World",
 			icon: <MdAccountBalance size={84} />,
 		},
 		{
-			id: 2,
-			title: "Mobile-Money",
-			content:
-				"We Provide Payments to our mobile Wallet and in to our  Integrated E-Wallet Partners.",
-			icon: <MdSendToMobile size={84} />,
+			id: 1,
+			title: "Payment Service",
+			content: "We Can Deposit in to Over 1,000 Banks Around The World",
+			icon: <MdPayment size={84} />,
 		},
 		{
-			id: 3,
+			id: 2,
 			title: "Cash",
 			content: "Fast Cash Pickup from our Large Network of Locations",
 			icon: <MdMoney size={84} />,
-		},
-		{
-			id: 4,
-			title: "Payment Services",
-			content:
-				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
-			icon: <MdOutlinePayments size={84} />,
 		},
 	];
 
 	return (
 		<>
-			<div className="container mx-auto text-white p-32 pt-20 pb-20">
+			<div
+				className="container mx-auto text-white p-32 pt-20 pb-20"
+				id="service">
 				<p className="text-2xl text-blue-700 mb-5 ">What We Do</p>
 
 				{/*  */}
@@ -71,19 +117,38 @@ export const Services = () => {
 					{/*  */}
 					<div>
 						<p className="text-justify">
-							Lorem ipsum, dolor sit amet consectetur adipisicing
-							elit. Neque accusantium veniam reiciendis facere rem
-							aperiam quisquam ipsum in porro, optio debitis,
-							deserunt repellat aliquid saepe, eius fuga dolorem!
-							Iusto, necessitatibus!
+							We are a financial service that helps you secure
+							your future with savings, credit and insurance. We
+							believe in the power of giving back to those who
+							need a helping hand – our customers.
 						</p>
 					</div>
 				</div>
 
 				<div
-					className="grid grid-cols-4 gap-10 mt-20"
+					className="grid grid-cols-3 gap-10 mt-20"
 					data-aos="fade-up"
 					data-aos-duration="3000">
+					{data2.map((d, i) => (
+						<>
+							<div
+								style={style}
+								key={i}
+								className="group shadow-2xl w-full h-96 p-10 mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
+								<p className="group-hover:text-slate-200 text-xl font-extrabold mb-3">
+									<div
+										style={style}
+										className="group-hover:text-red-700 border-2 rounded-full w-24 mb-5 shadow-2xl items-center">
+										<p className=" p-1">{d.icon}</p>
+									</div>
+									{d.title}
+								</p>
+								<span className="text-justify">
+									{d.content}
+								</span>
+							</div>
+						</>
+					))}
 					{data.map((d, i) => (
 						<>
 							<div
@@ -94,12 +159,13 @@ export const Services = () => {
 									<div
 										style={style}
 										className="group-hover:text-red-700 w-24 mb-5 shadow-2xl items-center">
-										<p
+										{/* <p
 											className=""
 											data-aos="fade-down"
 											data-aos-duration="3000">
 											{d.icon}
-										</p>
+										</p> */}
+										<img src={d.icon} alt={d.title} />
 									</div>
 									{d.title}
 								</p>
@@ -107,17 +173,6 @@ export const Services = () => {
 									{d.content}
 								</span>
 							</div>
-
-							{/* <div className="shadow-2xl w-full h-96 p-10 mt-14 transition duration-500 ease-in-out transorm sm:hover:scale-105 hover:z-50 hover:border rounded-sm cursor-pointer ">
-								<Boxes
-									// style={style}
-									// className="bg-black"
-									key={i}
-									icon={d.icon}
-									title={d.title}
-									content={d.content}
-								/>
-							</div> */}
 						</>
 					))}
 				</div>

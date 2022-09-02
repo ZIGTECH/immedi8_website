@@ -14,7 +14,7 @@ const style = {
 export const Contact = () => {
 	return (
 		<>
-			<div className="container mx-auto">
+			<div className="container mx-auto" id="contact">
 				<div className="grid grid-cols-2 gap-10 mt-10 border-t-2">
 					<div className="p-32">
 						<p className="text-2xl text-blue-700 mb-5 ">
@@ -176,7 +176,7 @@ export const Contact = () => {
 						{/* end */}
 					</div>
 
-					<div className="w-full text-white bg-slate-700 p-10">
+					<div className="w-full text-white bg-red-700 p-10">
 						<div className="mt-32 mx-auto">
 							<h2 class="font-extrabold">Contact Info</h2>
 

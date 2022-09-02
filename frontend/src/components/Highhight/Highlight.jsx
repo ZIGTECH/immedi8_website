@@ -12,27 +12,21 @@ const iconStyle = {
 export const Highlight = () => {
 	const data = [
 		{
-			id: 1,
-			title: "E-Commerce and FinTech",
-			content: "We Can Deposit in to Over 1,000 Banks Around The World",
-			icon: <MdBusinessCenter size={84} />,
-		},
-		{
 			id: 2,
-			title: "Money Transfer Business",
+			title: "Money Transfer",
 			content:
-				"We Provide Payments to our mobile Wallet and in to our  Integrated E-Wallet Partners.",
+				"Fast Cash Pickup from our Large Network of Locations, We Provide Payments to our mobile Wallet and in to our  Integrated E-Wallet Partners.",
 			icon: <MdOutlineMoney size={84} />,
 		},
 		{
 			id: 3,
-			title: "International Remittance",
+			title: "Loans & Lending",
 			content: "Fast Cash Pickup from our Large Network of Locations",
 			icon: <GoGlobe size={84} />,
 		},
 		{
 			id: 3,
-			title: "Foreign Exchange",
+			title: "Foreign Exchange & Currency",
 			content: "Fast Cash Pickup from our Large Network of Locations",
 			icon: <HiCurrencyDollar size={84} />,
 		},
@@ -40,8 +34,8 @@ export const Highlight = () => {
 
 	return (
 		<>
-			<div className="container mx-auto p-32">
-				<div className="grid grid-cols-4 gap-10">
+			<div className="container mx-auto p-32" id="highlight">
+				<div className="grid grid-cols-3 gap-10">
 					{data.map((d, i) => (
 						<Boxes
 							key={i}
