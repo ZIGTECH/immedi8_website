@@ -4,7 +4,11 @@ import logo from "../../assets/images/logo.png";
 import { RatesModal } from "../Rates/RatesModal";
 
 const Navbar = () => {
-	const [showRateModal, setShowRateModal] = useState(false);
+	const [open, setOpen] = useState(false);
+
+	const [size, setSize] = useState(null);
+
+	const handleOpen = value => setSize(value);
 
 	const navLinks = [
 		{
@@ -64,7 +68,10 @@ const Navbar = () => {
 											{link.display}
 										</Link>
 									))}
-									<Link onClick={setShowRateModal(true)}>
+
+									<Link
+										onClick={() => setOpen(true)}
+										className="cursor-pointer">
 										Rates
 									</Link>
 								</div>
@@ -128,7 +135,14 @@ const Navbar = () => {
 
 	return (
 		<>
+			{" "}
+			<RatesModal
+				open={open}
+				close={() => setOpen(false)}
+				handleOpen={() => handleOpen("md")}
+			/>
 			<div className="w-100">
+				{" "}
 				<MainNav />
 			</div>
 		</>
