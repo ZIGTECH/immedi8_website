@@ -55,11 +55,8 @@ export const Choose = () => {
 	return (
 		<>
 			<div className="container mx-auto ">
-				<div className="p-32 pt-32">
-					<p
-						className="text-2xl mb-5 text-blue-900 font-extrabold "
-						data-aos="fade-up"
-						data-aos-duration="3000">
+				<div className="p-32 pt-20">
+					<p className="text-2xl text-blue-700 mb-5 font-bold">
 						Why Choose Us
 					</p>
 
@@ -110,7 +107,7 @@ export const Choose = () => {
 								<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
 									<div className="bg-red-500">
 										<img
-											class="rounded-t-lg h-72"
+											class="rounded-t-lg h-72 rounded-xl"
 											src={data.icon}
 											alt=""
 										/>

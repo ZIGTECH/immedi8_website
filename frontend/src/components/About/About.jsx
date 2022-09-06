@@ -1,21 +1,24 @@
 import React from "react";
-import image from "../../assets/images/aboutImg.png";
-import image1 from "../../assets/images/techgroup.jpg";
 import Slider from "react-slick";
+import { about1, about2, about3, about4 } from "../../assets/main";
 
 export const About = () => {
 	const sliderImages = [
 		{
 			id: 1,
-			photo: image,
+			photo: about1,
 		},
 		{
 			id: 2,
-			photo: image1,
+			photo: about2,
 		},
 		{
 			id: 3,
-			photo: image,
+			photo: about3,
+		},
+		{
+			id: 4,
+			photo: about4,
 		},
 	];
 
@@ -61,7 +64,7 @@ export const About = () => {
 	return (
 		<>
 			<div className="pl-20 pr-20" id="about">
-				<div className="grid grid-cols-2 gap-10 p-10">
+				<div className="grid grid-cols-2 gap-5 p-10">
 					<div className="p-10">
 						<p className="text-2xl text-blue-700 font-bold mb-5">
 							Who We Are
@@ -87,20 +90,37 @@ export const About = () => {
 						</p>
 					</div>
 
-					<div className="">
-						<div className="">
-							<Slider {...settings} className="text-center">
-								<div>
-									<img src={image} alt="" />
-								</div>
-								<div>
-									<img src={image} alt="" />
-								</div>
-								<div>
-									<img src={image} alt="" />
-								</div>
-							</Slider>
-						</div>
+					<div className="w-full p-10 mt-10">
+						<Slider {...settings} className="text-center">
+							<div className="rounded-xl">
+								<img
+									src={about1}
+									alt="immedi8 finace image"
+									className="h-[600px] rounded-xl"
+								/>
+							</div>
+							<div className="rounded-xl">
+								<img
+									src={about2}
+									alt="immedi8 finace image"
+									className="h-[600px] rounded-xl"
+								/>
+							</div>
+							<div className="rounded-xl">
+								<img
+									src={about3}
+									alt="immedi8 finace image"
+									className="h-[600px] rounded-xl"
+								/>
+							</div>
+							<div className="rounded-xl">
+								<img
+									src={about4}
+									alt="immedi8 finace image"
+									className="h-[600px] rounded-xl"
+								/>
+							</div>
+						</Slider>
 					</div>
 				</div>
 			</div>

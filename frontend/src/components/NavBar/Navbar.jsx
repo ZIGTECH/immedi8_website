@@ -12,31 +12,37 @@ const Navbar = () => {
 
 	const navLinks = [
 		{
+			id: 1,
 			path: "home",
 			display: "Home",
 		},
 		{
+			id: 2,
 			path: "about",
 			display: "About",
 		},
 		{
+			id: 3,
 			path: "service",
 			display: "Services",
 		},
 
 		{
+			id: 4,
 			path: "products",
 			display: "Products",
 		},
 
 		{
+			id: 5,
 			path: "contact",
 			display: "Contact ",
 		},
-		{
-			path: "#",
-			display: "Send Money",
-		},
+		// {
+		// 	id: 6,
+		// 	path: "#",
+		// 	display: "Send Money",
+		// },
 	];
 
 	const MainNav = () => {
@@ -54,42 +60,21 @@ const Navbar = () => {
 									width={100}
 								/>
 							</div>
-							<div>
-								<div className="text-xl text-extrabold text-white group menu space-x-7">
-									{navLinks.map((link, i) => (
-										<Link
-											to={link.path}
-											spy={true}
-											smooth={true}
-											offset={-150}
-											duration={1500}
-											key={i}
-											className="hover:underline-offset-4  transition-all cursor-pointer">
-											{link.display}
-										</Link>
-									))}
-
+							<div className="hidden md:block w-2/4 text-xl text-extrabold text-white group menu space-x-7 ">
+								{navLinks.map((link, i) => (
 									<Link
-										onClick={() => setOpen(true)}
-										className="cursor-pointer">
-										Rates
+										to={link.path}
+										spy={true}
+										smooth={true}
+										offset={-150}
+										duration={1500}
+										key={i}
+										className={
+											"ml-60 hover:underline underline-offset-8 decoration-4 cursor-pointer"
+										}>
+										{link.display}
 									</Link>
-								</div>
-								<div className="md:hidden">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										className="h-6 w-6"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-										strokeWidth={2}>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M4 6h16M4 12h16m-7 6h7"
-										/>
-									</svg>
-								</div>
+								))}
 							</div>
 
 							<div className="flex items-center">
@@ -113,7 +98,7 @@ const Navbar = () => {
 										<input
 											type="search"
 											id="default-search"
-											class="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+											class="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg  border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 											placeholder="Track Transaction"
 											required
 										/>
@@ -125,6 +110,35 @@ const Navbar = () => {
 										Login
 									</a>{" "}
 								</span> */}
+							</div>
+
+							{/* breadcrumbs */}
+							<div className="md:hidden">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="h-6 w-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+									strokeWidth={2}>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										d="M4 6h16M4 12h16m-7 6h7"
+									/>
+								</svg>
+							</div>
+
+							{/* Rates && Send Money  */}
+							<div className="text-xl text-extrabold text-white group menu space-x-7 hidden md:block ">
+								<Link
+									onClick={() => setOpen(true)}
+									className="cursor-pointer border p-2 rounded bg-blue-900 hover:bg-blue-700">
+									Rates
+								</Link>
+								<Link className="cursor-pointer border p-2 rounded bg-blue-900 hover:bg-blue-700">
+									Send Money
+								</Link>
 							</div>
 						</div>
 					</div>

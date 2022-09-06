@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Boxes } from "../Boxes/Boxes";
-import { HiCurrencyDollar } from "react-icons/hi";
-import { BsBank } from "react-icons/bs";
-import { MdAccountBalance, MdMoney, MdOutlinePayments } from "react-icons/md";
-import { MdSendToMobile } from "react-icons/md";
 import img1 from "../../assets/images/testimonials.jpg";
+import { kjaw1 } from "../../assets/main";
 import Slider from "react-slick";
 
 const style = {
@@ -71,23 +67,14 @@ export const Testimonials = () => {
 	const data = [
 		{
 			id: 1,
-			name: "Shyn Sidibeh",
-			image: img1,
-			title: "CEO, SunShyn Poultry Farms",
+			name: "K Jawara",
+			image: kjaw1,
+			title: "CXO, Fankanta Technology",
 			content:
 				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
 		},
 		{
-			id: 1,
-			name: "Shyn Sidibeh",
-			image: img1,
-			title: "CEO, SunShyn Poultry Farms",
-
-			content:
-				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
-		},
-		{
-			id: 1,
+			id: 2,
 			name: "Shyn Sidibeh",
 			image: img1,
 			title: "CEO, SunShyn Poultry Farms",
@@ -96,7 +83,7 @@ export const Testimonials = () => {
 				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
 		},
 		{
-			id: 1,
+			id: 3,
 			name: "Shyn Sidibeh",
 			image: img1,
 			title: "CEO, SunShyn Poultry Farms",
@@ -105,7 +92,7 @@ export const Testimonials = () => {
 				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
 		},
 		{
-			id: 1,
+			id: 4,
 			name: "Shyn Sidibeh",
 			image: img1,
 			title: "CEO, SunShyn Poultry Farms",
@@ -114,7 +101,16 @@ export const Testimonials = () => {
 				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
 		},
 		{
-			id: 1,
+			id: 5,
+			name: "Shyn Sidibeh",
+			image: img1,
+			title: "CEO, SunShyn Poultry Farms",
+
+			content:
+				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
+		},
+		{
+			id: 6,
 			name: "Shyn Sidibeh",
 			image: img1,
 			title: "CEO, SunShyn Poultry Farms",
@@ -126,7 +122,7 @@ export const Testimonials = () => {
 
 	return (
 		<>
-			<div className="container mx-auto p-32 pt-20 pb-20">
+			<div className="container mx-auto p-32 pt-0 pb-10">
 				<p className="text-2xl text-blue-700 mb-5 font-bold">
 					Testimonials
 				</p>
@@ -158,14 +154,14 @@ export const Testimonials = () => {
 								<div
 									key={i}
 									className="group-hover:bg-slate-100 group-hover:scale-75 translate-x-4 skew-y-3 md:transform-none h-72 p-5 shadow-xl mx-5 rounded-xl cursor-pointer">
-									<p className="text-center mb-5">
+									<p className="text-center mb-10">
 										{d.content}
 									</p>
 									<div className="">
 										<img
-											src={img1}
+											src={d.image}
 											alt=""
-											width="90px"
+											width="100px"
 											className="mx-auto rounded-[50%]"
 										/>
 									</div>

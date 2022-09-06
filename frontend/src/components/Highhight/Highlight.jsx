@@ -15,26 +15,30 @@ export const Highlight = () => {
 			id: 2,
 			title: "Money Transfer",
 			content:
-				"Fast Cash Pickup from our Large Network of Locations, We Provide Payments to our mobile Wallet and in to our  Integrated E-Wallet Partners.",
+				"Fast Cash Pickup from our Large Network of Locations, bank Account Deposits, Wallet Payment and payments to our Integrated E-Wallet Partners.",
 			icon: <MdOutlineMoney size={84} />,
 		},
 		{
 			id: 3,
 			title: "Loans & Lending",
-			content: "Fast Cash Pickup from our Large Network of Locations",
+			content:
+				"Quick Small Loans for your every day need (Africa), Product Leasing & BNLP Services.",
 			icon: <GoGlobe size={84} />,
 		},
 		{
 			id: 3,
 			title: "Foreign Exchange & Currency",
-			content: "Fast Cash Pickup from our Large Network of Locations",
+			content: "Foreign Currency FX Services (Africa).",
 			icon: <HiCurrencyDollar size={84} />,
 		},
 	];
 
 	return (
 		<>
-			<div className="container mx-auto p-32" id="highlight">
+			<div className="container mx-auto p-20" id="highlight">
+				<h2 className="text-center text-blue-900 mb-10">
+					Meet Our Products
+				</h2>
 				<div className="grid grid-cols-3 gap-10">
 					{data.map((d, i) => (
 						<Boxes
