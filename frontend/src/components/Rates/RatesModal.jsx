@@ -14,7 +14,7 @@ const styles = {
 	margin: "0 auto !important",
 	alignItems: "center",
 	flexDirection: "row",
-	backgroundColor: "red !important",
+	// backgroundColor: "red !important",
 };
 export const RatesModal = props => {
 	const [size, setSize] = useState(null);

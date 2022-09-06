@@ -7,8 +7,9 @@ import {
 } from "react-icons/md";
 
 const style = {
-	background: "#2f2f2f",
-	color: "white",
+	// background: "#2f2f2f",
+	background: "white",
+	color: "black",
 };
 
 export const Contact = () => {
@@ -169,7 +170,7 @@ export const Contact = () => {
 						<button
 							// style={contactStyle}
 							type="submit"
-							class="mt-10 p-10 bg-slate-700  text-slate-100 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+							class="mt-10 p-10 bg-blue-800  text-slate-100 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xl  px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
 							Submit Now
 						</button>
 
@@ -177,7 +178,7 @@ export const Contact = () => {
 					</div>
 
 					<div className="w-full text-white bg-red-700 p-10">
-						<div className="mt-32 mx-auto">
+						<div className="mt-32 mx-auto w-3/4">
 							<h2 class="font-extrabold">Contact Info</h2>
 
 							<div className="grid grid-cols-2 gap-10">
@@ -197,7 +198,7 @@ export const Contact = () => {
 									</div>
 								</div>
 
-								<div className="group flex mt-8">
+								<div className="group flex mt-8 cursor-pointer">
 									<span className="">
 										<MdWifiCalling2 size={42} />
 									</span>
@@ -221,8 +222,8 @@ export const Contact = () => {
 								</div>
 							</div>
 
-							<div className="grid grid-cols-2 gap-20">
-								<div className="flex mt-14">
+							<div className="grid grid-cols-2 gap-10">
+								<div className="flex mt-14 cursor-pointer">
 									<span>
 										<MdOutlineEmail size={42} />
 									</span>
@@ -230,11 +231,11 @@ export const Contact = () => {
 										<p className="font-extrabold text-xl mb-1">
 											Mail Us
 										</p>
-										<p>Transfer@immedi8.com</p>
+										<p>Transfer@immedi8money.com</p>
 									</div>
 								</div>
 
-								<div className="flex mt-14">
+								<div className="flex mt-14 cursor-pointer">
 									<span>
 										<MdAccessTime size={42} />
 									</span>

@@ -18,6 +18,24 @@ import realtime from "./images/realtime.png";
 import reliable from "./images/reliable.png";
 import instantcash from "./images/instantcash.png";
 import policy from "./images/policy.png";
+import paymentService from "./images/paymentService.jpeg";
+import cashCollection from "./images/cashCollection.jpeg";
+import AppStore from "./images/AppStore.png";
+import GooglePlay from "./images/GooglePlay.png";
+import kjaw1 from "./images/kjaw1.jpeg";
+import bank from "./images/bank.jpeg";
+import banner1 from "./images/bannerImages/banner1.jpeg";
+import banner2 from "./images/bannerImages/banner2.jpeg";
+import banner3 from "./images/bannerImages/banner3.jpeg";
+import banner4 from "./images/bannerImages/banner4.jpeg";
+import banner5 from "./images/bannerImages/banner5.jpeg";
+import banner6 from "./images/bannerImages/banner6.jpeg";
+import banner7 from "./images/bannerImages/banner7.jpeg";
+import about1 from "./images/bannerImages/about1.jpeg";
+import about2 from "./images/bannerImages/about2.jpeg";
+import about3 from "./images/bannerImages/about3.jpeg";
+import about4 from "./images/bannerImages/about4.jpeg";
+import downloadApp from "./images/bannerImages/downloadApp.jpeg";
 
 export {
 	icar,
@@ -40,4 +58,22 @@ export {
 	reliable,
 	instantcash,
 	policy,
+	paymentService,
+	cashCollection,
+	bank,
+	banner1,
+	banner2,
+	banner3,
+	banner4,
+	banner5,
+	banner6,
+	banner7,
+	about1,
+	about2,
+	about3,
+	about4,
+	downloadApp,
+	GooglePlay,
+	AppStore,
+	kjaw1,
 };

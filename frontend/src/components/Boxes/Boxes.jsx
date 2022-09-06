@@ -12,19 +12,21 @@ export const Boxes = ({ icon, title, content }) => {
 				<>
 					<div
 						style={style}
-						className="group-hover:bg-slate-100 rounded shadow-2xl h-80 p-10 mt-14 group cursor-pointer ">
-						<div className="group-hover:animate-pulse group-hover:text-blue-700 transition duration-500 ease-in mb-5 items-center">
+						className="group-hover:bg-slate-100 rounded-xl shadow-2xl h-80 p-10 group cursor-pointer">
+						<div className="group-hover:animate-pulse group-hover:text-blue-700 transition duration-500 ease-in mb-5 text-center">
 							<p
-								className=""
+								className="flex ml-32 text-center"
 								data-aos="fade-right"
 								data-aos-duration="3000">
 								{icon}
 							</p>
 						</div>
-						<p className="text-xl font-extrabold mb-3 group-hover:text-blue-700">
+						<p className="text-xl font-extrabold mb-3 group-hover:text-blue-700 text-center">
 							{title}
 						</p>
-						<span className="text-justify">{content}</span>
+						<div className="text-center">
+							<span className="text-center">{content}</span>
+						</div>
 					</div>
 				</>
 			</div>

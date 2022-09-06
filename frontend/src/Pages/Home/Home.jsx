@@ -12,6 +12,7 @@ import { Regulators } from "../../components/Regulators/Regulators";
 import { Services } from "../../components/Services/Services";
 import { Testimonials } from "../../components/Testimonials/Testimonials";
 import { Choose } from "../../components/WhyUs/Choose";
+import { Banner } from "../../components/Banner/Banner";
 
 const serviceStyle = {
 	background: "#222121",
@@ -28,6 +29,10 @@ export const Home = () => {
 	return (
 		<div className="">
 			<Header />
+
+			<section>
+				<Banner />
+			</section>
 
 			<section className="bg-slate-200">
 				<Highlight />

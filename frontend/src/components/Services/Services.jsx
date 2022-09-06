@@ -11,7 +11,17 @@ import {
 	MdPayment,
 } from "react-icons/md";
 import { MdSendToMobile } from "react-icons/md";
-import { ifx, iwallet, iloan, ilease, ipower, itop } from "../../assets/main";
+import {
+	ifx,
+	iwallet,
+	iloan,
+	ilease,
+	ipower,
+	itop,
+	paymentService,
+	cashCollection,
+	bank,
+} from "../../assets/main";
 
 const style = {
 	background: "#2f2f2f",
@@ -36,7 +46,7 @@ export const Services = () => {
 			id: 3,
 			title: "Mobile-Wallet (I-Wallet)",
 			content:
-				"We Provide Payments to our mobile Wallet and in to our  Integrated E-Wallet Partners.",
+				"Our mobile wallet solution facilitates E-money transactions and movement of funds into out integrated E-wallet partners, Banks and other finaancial institutions. ",
 			icon: iwallet,
 		},
 
@@ -44,35 +54,35 @@ export const Services = () => {
 			id: 4,
 			title: "Micro Lending (I-Loan)",
 			content:
-				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+				"Our new micro lending and quick loan services provides comfort and relief financial pressure from our clients and their families, Easy, Quick and fast decisions. (currently in Africa only)",
 			icon: iloan,
 		},
 		{
 			id: 5,
 			title: "BNPL - Buy Now / Pay Later (I-Lease)",
 			content:
-				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+				"Buy now pay later (BNPL) is available on our lending platform providing our customers the ability to purchase product and services now and pay at a later date. I.E Our smartphone finance (Africa)",
 			icon: ilease,
 		},
 		{
 			id: 6,
 			title: "Currency Dealings (I-Fx)",
 			content:
-				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+				"Our I-FX trading platform provides on the spots online Foreign currency buying or hedgings portfolio for our clientelle. ",
 			icon: ifx,
 		},
 		{
 			id: 7,
 			title: "Mobile Top-Ups (I-TopUp)",
 			content:
-				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+				"Our I-TopUp, mobile credit and data purchasing platform enable clients to purchase their choosen mobile service provider's data and mobile credit.",
 			icon: itop,
 		},
 		{
 			id: 8,
 			title: "Electricity Purchase (I-Power)",
 			content:
-				"Our E-Payment Solution and Integrated Serfvices, Offers Quick Online Payment for Goods& Services, Utility Bills, Mobile Top-Ups.",
+				"Our electricity buying platform avails both prepaid and postpaid electricity purchasing functionality for our clients and the services is been rendered in several countries. (Africa) ",
 			icon: ipower,
 		},
 	];
@@ -82,19 +92,20 @@ export const Services = () => {
 			id: 1,
 			title: "Bank Deposit (Online)",
 			content: "We Can Deposit in to Over 1,000 Banks Around The World",
-			icon: <MdAccountBalance size={84} />,
+			icon: bank,
 		},
 		{
 			id: 1,
 			title: "Payment Service",
-			content: "We Can Deposit in to Over 1,000 Banks Around The World",
-			icon: <MdPayment size={84} />,
+			content:
+				"We are a World Wide payment service providing leverage and electronic money transfer services",
+			icon: paymentService,
 		},
 		{
 			id: 2,
-			title: "Cash",
+			title: "Cash Collection",
 			content: "Fast Cash Pickup from our Large Network of Locations",
-			icon: <MdMoney size={84} />,
+			icon: cashCollection,
 		},
 	];
 
@@ -116,17 +127,18 @@ export const Services = () => {
 
 					{/*  */}
 					<div>
-						<p className="text-justify">
-							We are a financial service that helps you secure
-							your future with savings, credit and insurance. We
-							believe in the power of giving back to those who
-							need a helping hand – our customers.
+						<p className="text-justify text-xl">
+							Our existence was borne out of the need to provide
+							the needed, Affordable, Reliable and fast
+							transaction delivery platform via which
+							transactional needs and investment requirements are
+							met both locally and internationally.
 						</p>
 					</div>
 				</div>
 
 				<div
-					className="grid grid-cols-3 gap-10 mt-20"
+					className="grid grid-cols-3 gap-10 mt-5"
 					data-aos="fade-up"
 					data-aos-duration="3000">
 					{data2.map((d, i) => (
@@ -135,15 +147,21 @@ export const Services = () => {
 								style={style}
 								key={i}
 								className="group shadow-2xl w-full h-96 p-10 mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
-								<p className="group-hover:text-slate-200 text-xl font-extrabold mb-3">
-									<div
-										style={style}
-										className="group-hover:text-red-700 border-2 rounded-full w-24 mb-5 shadow-2xl items-center">
-										<p className=" p-1">{d.icon}</p>
-									</div>
+								<div
+									style={style}
+									className="w-32 rounded-full border  group-hover:text-red-700 mb-5 shadow-2xl text-center">
+									{/* <p className=" p-1">{d.icon}</p> */}
+									<img
+										src={d.icon}
+										alt=""
+										className={"h-32 rounded-full"}
+										width={"100%"}
+									/>
+								</div>
+								<p className="group-hover:text-slate-200 text-2xl font-extrabold mb-3">
 									{d.title}
 								</p>
-								<span className="text-justify">
+								<span className="text-justify text-xl">
 									{d.content}
 								</span>
 							</div>
@@ -154,22 +172,26 @@ export const Services = () => {
 							<div
 								style={style}
 								key={i}
-								className="group shadow-2xl w-full h-96 p-10 mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
-								<p className="group-hover:text-slate-200 text-xl font-extrabold mb-3">
+								className="group shadow-2xl w-full h-[530px] p-10 mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
+								<p className="group-hover:text-slate-200 text-2xl font-extrabold mb-5">
 									<div
 										style={style}
-										className="group-hover:text-red-700 w-24 mb-5 shadow-2xl items-center">
+										className="group-hover:text-red-700 w-32 mb-10 shadow-2xl items-center">
 										{/* <p
 											className=""
 											data-aos="fade-down"
 											data-aos-duration="3000">
 											{d.icon}
 										</p> */}
-										<img src={d.icon} alt={d.title} />
+										<img
+											src={d.icon}
+											alt={d.title}
+											className=""
+										/>
 									</div>
 									{d.title}
 								</p>
-								<span className="text-justify">
+								<span className="text-justify text-xl mt-10">
 									{d.content}
 								</span>
 							</div>
