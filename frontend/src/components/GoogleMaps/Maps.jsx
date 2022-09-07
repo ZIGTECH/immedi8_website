@@ -3,7 +3,7 @@ import { Map, GoogleApiWrapper } from "google-maps-react";
 
 const Maps = props => {
 	return (
-		<div className="">
+		<div className="h-full">
 			<Map
 				google={props.google}
 				style={{ width: "100%", height: "70%" }}

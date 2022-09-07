@@ -61,12 +61,12 @@ export const Regulators = () => {
 
 	return (
 		<>
-			<div className="mt-[44rem] p-16 gap-10  border-red-700 border-t-2 border-b-2">
-				<div className="container mx-auto flex">
+			<div className="lg:mt-[44rem] mt-[40rem] p-16 gap-10  border-red-700 border-t-2 border-b-2">
+				<div className="container mx-auto lg:flex">
 					{/* REGULATORS */}
-					<div className="regulators">
+					<div className="regulators ">
 						<p
-							className="text-xl text-blue-900 font-extrabold mb-10 mt-0"
+							className="text-center lg:text-start text-xl text-blue-900 font-extrabold mb-10 lg:mt-0"
 							data-aos="fade-up"
 							data-aos-duration="3000">
 							Our <br />
@@ -104,9 +104,9 @@ export const Regulators = () => {
 					</div>
 
 					{/* WE ACCEPT */}
-					<div>
+					<div className="">
 						<p
-							className="text-xl text-blue-900 font-extrabold mb-10 mt-0 ml-10"
+							className="text-center lg:text-start text-xl text-blue-900 font-extrabold mb-10 mt-10 lg:mt-0 ml-10"
 							data-aos="fade-up"
 							data-aos-duration="3000">
 							We <br />
@@ -117,7 +117,7 @@ export const Regulators = () => {
 								Accept
 							</span>
 						</p>
-						<div className="grid grid-cols-4 gap-5 mt-5">
+						<div className="grid grid-cols-4 gap-5 mt-5 mr-10">
 							{data.map((d, i) => (
 								<img
 									key={i}

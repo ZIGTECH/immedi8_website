@@ -16,15 +16,15 @@ export const Newsletter = () => {
 		<>
 			<div style={style} className="">
 				<div className="container mx-auto my-auto p-8">
-					<div className="grid grid-cols-2 gap-10 mt-10 items-center">
+					<div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:mt-10 lg:items-center">
 						<div className="flex items-center">
 							<img
 								src={logo}
 								alt="The zigtech logo"
-								// className="bg-inherit"
+								className="hidden lg:block"
 								width={100}
 							/>
-							<div className="ml-5">
+							<div className="ml-5 mb-5">
 								<h2>Newsletter Subscriber</h2>
 							</div>
 						</div>

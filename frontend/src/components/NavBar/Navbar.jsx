@@ -57,7 +57,8 @@ const Navbar = () => {
 								<img
 									src={logo}
 									alt="The zigtech logo"
-									width={100}
+									// width={80}
+									className="w-20"
 								/>
 							</div>
 							<div className="hidden md:block w-2/4 text-xl text-extrabold text-white group menu space-x-7 ">
@@ -77,7 +78,7 @@ const Navbar = () => {
 								))}
 							</div>
 
-							<div className="flex items-center">
+							<div className="hidden md:flex md:items-center">
 								<form className="mr-5">
 									<div class="relative">
 										<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
@@ -113,7 +114,7 @@ const Navbar = () => {
 							</div>
 
 							{/* breadcrumbs */}
-							<div className="md:hidden">
+							<div className="lg:hidden">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									className="h-6 w-6"

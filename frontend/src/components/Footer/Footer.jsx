@@ -17,15 +17,15 @@ export const Footer = () => {
 				{/* QUICK LINK */}
 				<div className="container mx-auto border-t-2 border-gray-500 p-16 ">
 					<p
-						className="text-xl font-extrabold mb-10 mt-0 text-gray-300"
+						className="text-center lg:text-start text-xl font-extrabold mb-10 mt-0 text-gray-300"
 						data-aos="fade-up"
 						data-aos-duration="3000">
 						Quick Links
 					</p>
 
 					{/* NAV LINKS */}
-					<div className="grid grid-cols-4 gap-3 ml-20">
-						<div className="cursor-pointer">
+					<div className="lg:grid lg:grid-cols-4 lg:gap-3 lg:ml-20 grid grid-cols-2 gap-8">
+						<div className="cursor-pointer mb-10">
 							<ul className="tracking-widest text-gray-400">
 								<li className="hover:underline">About</li>
 								<li className="mt-2 hover:underline">
@@ -102,7 +102,7 @@ export const Footer = () => {
 
 					{/* BOTTOM FOOTER */}
 					<hr class="my-6 border-gray-500 sm:mx-auto dark:border-gray-700 lg:my-8" />
-					<div class="sm:flex sm:items-center sm:justify-between">
+					<div class="lg:flex lg:items-center lg:justify-between">
 						<span class="text-sm  sm:text-center dark:text-gray-400">
 							<p className=" mt-5">
 								CopyRight © 2022. Immedi8 financial Services.
@@ -111,7 +111,7 @@ export const Footer = () => {
 						</span>
 
 						{/* SOCIAL MEDIA ICONS */}
-						<div class="flex mt-4 space-x-2 sm:justify-center items-center sm:mt-0">
+						<div class="hidden lg:flex mt-4 space-x-2 sm:justify-center items-center sm:mt-0">
 							{/* <RiLinkedinLine size={40} /> */}
 							<a
 								href="#"

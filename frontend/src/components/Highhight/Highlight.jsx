@@ -35,11 +35,11 @@ export const Highlight = () => {
 
 	return (
 		<>
-			<div className="container mx-auto p-20" id="highlight">
+			<div className="container mx-auto p-10 lg:p-20" id="highlight">
 				<h2 className="text-center text-blue-900 mb-10">
 					Meet Our Products
 				</h2>
-				<div className="grid grid-cols-3 gap-10">
+				<div className="md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3 p-0">
 					{data.map((d, i) => (
 						<Boxes
 							key={i}

@@ -35,7 +35,7 @@ export const Policy = () => {
 				<div className="flex">
 					<div className="flex-1 w-full">
 						<p
-							className="text-xl text-blue-900 font-extrabold mb-10"
+							className="text-center lg:text-start text-xl text-blue-900 font-extrabold mb-10"
 							data-aos="fade-up"
 							data-aos-duration="3000">
 							Our <br />
@@ -1531,7 +1531,7 @@ export const Policy = () => {
 					{/* ACCORDION */}
 
 					{/* IMAGE */}
-					<div className=" flex-1 w-1/4 ">
+					<div className="hidden lg:block flex-1 w-1/4 ">
 						<div>
 							<img src={policy} alt="policy image" width="80%" />
 						</div>

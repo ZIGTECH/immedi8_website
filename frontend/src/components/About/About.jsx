@@ -47,8 +47,8 @@ export const About = () => {
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 1,
+					slidesToScroll: 1,
 					initialSlide: 2,
 				},
 			},
@@ -63,13 +63,13 @@ export const About = () => {
 	};
 	return (
 		<>
-			<div className="pl-20 pr-20" id="about">
-				<div className="grid grid-cols-2 gap-5 p-10">
-					<div className="p-10">
-						<p className="text-2xl text-blue-700 font-bold mb-5">
+			<div className="lg:pl-20 lg:pr-20" id="about">
+				<div className="lg:grid lg:grid-cols-2 lg:gap-5 lg:p-10 p-10">
+					<div className="mb-5">
+						<p className="text-center lg:text-start text-2xl text-blue-700 font-bold mb-2 md:mb-5">
 							Who We Are
 						</p>
-						<h2 className="mb-7">
+						<h2 className="text-center lg:text-start mb-5 md:mb-7">
 							Immedi8 Financial <br /> Service.
 						</h2>
 						<p className="text-justify leading-relaxed">
@@ -90,7 +90,7 @@ export const About = () => {
 						</p>
 					</div>
 
-					<div className="w-full p-10 mt-10">
+					<div className="hidden lg:block w-full p-10 mt-0 md:mt-10">
 						<Slider {...settings} className="text-center">
 							<div className="rounded-xl">
 								<img

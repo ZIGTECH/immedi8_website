@@ -82,7 +82,7 @@ export const Banner = () => {
 
 	return (
 		<>
-			<div className="container bg-black mx-auto border rounded-xl my-10">
+			<div className="hidden container bg-black mx-auto border rounded-xl my-10">
 				<Slider {...settings}>
 					<div className="w-full py-10 mx-auto">
 						<img

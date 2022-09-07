@@ -13,6 +13,7 @@ import { Services } from "../../components/Services/Services";
 import { Testimonials } from "../../components/Testimonials/Testimonials";
 import { Choose } from "../../components/WhyUs/Choose";
 import { Banner } from "../../components/Banner/Banner";
+// import MessengerCustomerChat from "react-messenger-customer-chat";
 
 const serviceStyle = {
 	background: "#222121",
@@ -28,43 +29,40 @@ const contactStyle = {
 export const Home = () => {
 	return (
 		<div className="">
+			{/* <MessengerCustomerChat
+				pageId="<PAGE_ID>"
+				appId="<APP_ID>"
+				htmlRef="<REF_STRING>"
+			/> */}
+			,
 			<Header />
-
 			<section>
 				<Banner />
 			</section>
-
 			<section className="bg-slate-200">
 				<Highlight />
 			</section>
-
-			<section className="container mx-auto mt-20">
+			<section className="container mx-auto mt-10 md:mt-20">
 				<About />
 			</section>
-
-			<section style={serviceStyle} className="mt-20">
+			<section style={serviceStyle} className="mt-10 md:mt-20">
 				<Services />
 			</section>
-
 			{/* <section>
 				<Products />
 			</section> */}
-
 			<section className="bg-slate-200">
 				<Choose />
 			</section>
-
-			<section className="mt-20">
+			<section className="mt-10 md:mt-20">
 				<Testimonials />
 			</section>
-
 			<section style={contactStyle}>
 				<Contact />
 			</section>
 			<section className="">
 				<Maps />
 			</section>
-
 			<section
 				className="border"
 				style={{
@@ -72,11 +70,9 @@ export const Home = () => {
 				}}>
 				<Regulators />
 			</section>
-
 			<section>
 				<Policy />
 			</section>
-
 			<section>
 				<Footer />
 			</section>

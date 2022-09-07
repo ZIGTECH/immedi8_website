@@ -45,17 +45,19 @@ const HeroSection = () => {
 						</div>
 						{/*  */}
 						<div className="content absolute h-full w-full left-0 top-0 z-10 bg-gray-900 opacity-70">
-							<div className="container absolute top-1/4 left-48">
+							<div className="container absolute md:top-1/4 md:left-48">
 								<div
 									className="slider__content text-center"
 									data-aos="fade-up"
 									data-aos-easing="linear"
 									data-aos-duration="1000">
-									<div className="text-white">
-										<h1 style={textStyle} className="mt-32">
+									<div className="hidden lg:block text-white">
+										<p
+											style={textStyle}
+											className="sm:text-[20px]">
 											International Money Transfer <br />{" "}
 											WorldWide
-										</h1>
+										</p>
 
 										<div className="flex justify-center align-center pt-20">
 											<Button
