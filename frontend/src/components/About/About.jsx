@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "react-slick";
 import { about1, about2, about3, about4 } from "../../assets/main";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const About = () => {
 	const sliderImages = [
@@ -47,8 +49,8 @@ export const About = () => {
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 1,
+					slidesToScroll: 1,
 					initialSlide: 2,
 				},
 			},
@@ -61,18 +63,42 @@ export const About = () => {
 			},
 		],
 	};
+
+	useEffect(() => {
+		AOS.init({
+			offset: 120,
+			delay: 0,
+			duration: 400,
+			easing: "ease",
+			once: false,
+			mirror: false,
+			anchorPlacement: "top-bottom",
+		});
+	}, []);
+
 	return (
 		<>
-			<div className="pl-20 pr-20" id="about">
-				<div className="grid grid-cols-2 gap-5 p-10">
-					<div className="p-10">
-						<p className="text-2xl text-blue-700 font-bold mb-5">
+			<div className="lg:pl-20 lg:pr-20" id="about">
+				<div
+					className="lg:grid lg:grid-cols-2 lg:gap-5 lg:p-10 p-10
+				">
+					<div className="mb-5 lg:mt-10">
+						<p
+							className="text-center lg:text-start text-2xl text-blue-700 font-bold mb-2 lg:mb-5"
+							data-aos="fade-down"
+							data-aos-duration="3000">
 							Who We Are
 						</p>
-						<h2 className="mb-7">
+						<h2
+							className="text-center lg:text-start mb-5 md:mb-7"
+							data-aos="fade-up"
+							data-aos-duration="3000">
 							Immedi8 Financial <br /> Service.
 						</h2>
-						<p className="text-justify leading-relaxed">
+						<p
+							className="text-justify leading-relaxed"
+							data-aos="fade-right"
+							data-aos-duration="3000">
 							We are a Financial Services Institution specializing
 							In Money Services Business, International Remittance
 							(wholesale and retail) and Foreign Exchange &
@@ -90,7 +116,10 @@ export const About = () => {
 						</p>
 					</div>
 
-					<div className="w-full p-10 mt-10">
+					<div
+						className="hidden lg:block w-full p-10 mt-0 md:mt-10"
+						data-aos="fade-left"
+						data-aos-duration="3000">
 						<Slider {...settings} className="text-center">
 							<div className="rounded-xl">
 								<img

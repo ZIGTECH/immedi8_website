@@ -1,9 +1,10 @@
 import React from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
+import env from "react-dotenv";
 
 const Maps = props => {
 	return (
-		<div className="">
+		<div className="h-full">
 			<Map
 				google={props.google}
 				style={{ width: "100%", height: "70%" }}
@@ -18,5 +19,5 @@ const Maps = props => {
 };
 
 export default GoogleApiWrapper({
-	apiKey: "AIzaSyCsUyashaHsw4wrntQ_QCbFLHSn2BK2yS0",
+	apiKey: process.env.GOOGLE_MAP_API_KEY,
 })(Maps);

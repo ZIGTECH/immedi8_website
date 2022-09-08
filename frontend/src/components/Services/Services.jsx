@@ -112,13 +112,15 @@ export const Services = () => {
 	return (
 		<>
 			<div
-				className="container mx-auto text-white p-32 pt-20 pb-20"
+				className="container mx-auto text-white p-10 lg:p-32 lg:pt-20 lg:pb-20"
 				id="service">
-				<p className="text-2xl text-blue-700 mb-5 ">What We Do</p>
+				<p className="text-center lg:text-start text-2xl text-blue-700 mb-3 md:mb-5 ">
+					What We Do
+				</p>
 
 				{/*  */}
-				<div className="grid grid-cols-2 gap-10 items-center">
-					<div>
+				<div className="lg:grid lg:grid-cols-2 lg:gap-10 items-center">
+					<div className="text-center lg:text-start mb-5">
 						<h2 className="font-bold">
 							We Ensure Best Financial <br /> Service For Our
 							Client.
@@ -127,7 +129,7 @@ export const Services = () => {
 
 					{/*  */}
 					<div>
-						<p className="text-justify text-xl">
+						<p className="text-justify  md:text-xl">
 							Our existence was borne out of the need to provide
 							the needed, Affordable, Reliable and fast
 							transaction delivery platform via which
@@ -138,7 +140,7 @@ export const Services = () => {
 				</div>
 
 				<div
-					className="grid grid-cols-3 gap-10 mt-5"
+					className="md:grid md:grid-cols-2 md:gap-10 md:mt-5 lg:grid-cols-3"
 					data-aos="fade-up"
 					data-aos-duration="3000">
 					{data2.map((d, i) => (
@@ -146,24 +148,22 @@ export const Services = () => {
 							<div
 								style={style}
 								key={i}
-								className="group shadow-2xl w-full h-96 p-10 mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
+								className="group h-[530px] shadow-2xl w-full lg:h-96 p-10 mt-8 md:mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-lg cursor-pointer ">
 								<div
 									style={style}
-									className="w-32 rounded-full border  group-hover:text-red-700 mb-5 shadow-2xl text-center">
-									{/* <p className=" p-1">{d.icon}</p> */}
+									className="flex md:flex-none mx-auto w-32 rounded-full mb-5 shadow-2xl md:mx-0">
 									<img
 										src={d.icon}
 										alt=""
-										className={"h-32 rounded-full"}
-										width={"100%"}
+										className="group-hover:transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300 w-full border h-32 rounded-full"
 									/>
 								</div>
-								<p className="group-hover:text-slate-200 text-2xl font-extrabold mb-3">
+								<p className="group-hover:text-slate-200 text-center md:text-start text-2xl font-extrabold mb-3">
 									{d.title}
 								</p>
-								<span className="text-justify text-xl">
+								<p className="text-center md:text-justify text-xl">
 									{d.content}
-								</span>
+								</p>
 							</div>
 						</>
 					))}
@@ -172,28 +172,22 @@ export const Services = () => {
 							<div
 								style={style}
 								key={i}
-								className="group shadow-2xl w-full h-[530px] p-10 mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
-								<p className="group-hover:text-slate-200 text-2xl font-extrabold mb-5">
-									<div
-										style={style}
-										className="group-hover:text-red-700 w-32 mb-10 shadow-2xl items-center">
-										{/* <p
-											className=""
-											data-aos="fade-down"
-											data-aos-duration="3000">
-											{d.icon}
-										</p> */}
-										<img
-											src={d.icon}
-											alt={d.title}
-											className=""
-										/>
-									</div>
+								className="group shadow-2xl w-full h-[530px] p-10 mt-8 md:mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
+								<div
+									style={style}
+									className="flex mx-auto w-32 rounded-full mb-5 shadow-2xl md:flex-none md:mx-0">
+									<img
+										src={d.icon}
+										alt=""
+										className="group-hover:transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300 w-full  h-32 rounded-full"
+									/>
+								</div>
+								<p className="group-hover:text-slate-200 text-center md:text-start text-2xl font-extrabold mb-3">
 									{d.title}
 								</p>
-								<span className="text-justify text-xl mt-10">
+								<p className="text-center md:text-justify text-xl">
 									{d.content}
-								</span>
+								</p>
 							</div>
 						</>
 					))}

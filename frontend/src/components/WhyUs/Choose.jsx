@@ -55,59 +55,21 @@ export const Choose = () => {
 	return (
 		<>
 			<div className="container mx-auto ">
-				<div className="p-32 pt-20">
-					<p className="text-2xl text-blue-700 mb-5 font-bold">
+				<div className="p-10 lg:p-32 lg:pt-20">
+					<p className="lg:mb-10 text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold">
 						Why Choose Us
 					</p>
 
 					<div
-						className="grid grid-cols-3 gap-10"
-						data-aos="fade-up"
+						className="md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3"
+						data-aos="fade-bottom-left"
 						data-aos-duration="3000">
 						{data.map((data, i) => (
 							<>
-								{/* <div
-									style={style}
-									key={i}
-									className="shadow-2xl w-full h-80 p-10 mt-14 group cursor-pointer ">
-									<div className="group-hover:animate-bounce transition duration-500 ease-in w-20 mb-5 shaodw-2xl border rounded-[50%] bg-slate-300 items-center">
-										<p
-											className=""
-											data-aos="fade-down"
-											data-aos-duration="3000">
-											{data.icon}
-										</p>
-									</div>
-									<p className="text-xl font-extrabold mb-3 group-hover:text-blue-700">
-										{data.title}
-									</p>
-									<span className="text-justify">
-										{data.content}
-									</span>
-								</div> */}
-
-								{/* <a
-									href="#"
-									class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-									<img
-										src={data.icon}
-										alt=""
-										class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
-									/>
-									<div class="flex flex-col justify-between p-4 leading-normal">
-										<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-											{data.title}
-										</h5>
-										<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-											{data.content}
-										</p>
-									</div>
-								</a> */}
-
-								<div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+								<div class="max-w-sm mb-5 hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700">
 									<div className="bg-red-500">
 										<img
-											class="rounded-t-lg h-72 rounded-xl"
+											class="rounded-t-lg md:h-72 rounded-xl"
 											src={data.icon}
 											alt=""
 										/>

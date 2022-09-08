@@ -28,8 +28,8 @@ export const Testimonials = () => {
 			{
 				breakpoint: 1024,
 				settings: {
-					slidesToShow: 3,
-					slidesToScroll: 3,
+					slidesToShow: 2,
+					slidesToScroll: 2,
 					infinite: true,
 					dots: true,
 				},
@@ -37,8 +37,8 @@ export const Testimonials = () => {
 			{
 				breakpoint: 600,
 				settings: {
-					slidesToShow: 2,
-					slidesToScroll: 2,
+					slidesToShow: 1,
+					slidesToScroll: 1,
 					initialSlide: 2,
 				},
 			},
@@ -122,14 +122,14 @@ export const Testimonials = () => {
 
 	return (
 		<>
-			<div className="container mx-auto p-32 pt-0 pb-10">
-				<p className="text-2xl text-blue-700 mb-5 font-bold">
+			<div className="container mx-auto p-10 lg:p-32 lg:pt-20 lg:pb-20">
+				<p className="text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold">
 					Testimonials
 				</p>
 
 				{/*  */}
-				<div className="grid grid-cols-2 gap-10 items-center">
-					<div>
+				<div className="lg:grid lg:grid-cols-2 lg:gap-10 items-center">
+					<div className="text-center lg:text-start mb-5">
 						<h2 className="font-bold">
 							What Our Clients says About <br /> Immedi8 Finance.
 						</h2>
@@ -147,14 +147,14 @@ export const Testimonials = () => {
 					</div>
 				</div>
 
-				<Slider {...settings} className="mx-auto my-10">
+				<Slider {...settings} className="mx-auto lg:my-10">
 					{data.map((d, i) => (
 						<div className="group grid grid-cols-3 mt-20">
 							<>
 								<div
 									key={i}
-									className="group-hover:bg-slate-100 group-hover:scale-75 translate-x-4 skew-y-3 md:transform-none h-72 p-5 shadow-xl mx-5 rounded-xl cursor-pointer">
-									<p className="text-center mb-10">
+									className="group-hover:bg-slate-100 lg:group-hover:scale-75 lg:translate-x-4 lg:skew-y-3 md:transform-none h-72 p-5 shadow-xl mx-5 rounded-xl cursor-pointer">
+									<p className="text-center mb-3 lg:mb-10">
 										{d.content}
 									</p>
 									<div className="">
