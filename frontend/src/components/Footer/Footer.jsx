@@ -24,7 +24,7 @@ export const Footer = () => {
 					</p>
 
 					{/* NAV LINKS */}
-					<div className="lg:grid lg:grid-cols-4 lg:gap-3 lg:ml-20 grid grid-cols-2 gap-8">
+					<div className=" md:grid md:grid-cols-4 md:gap-3 lg:ml-20 grid grid-cols-2 gap-8">
 						<div className="cursor-pointer mb-10">
 							<ul className="tracking-widest text-gray-400">
 								<li className="hover:underline">About</li>
@@ -82,7 +82,7 @@ export const Footer = () => {
 							</ul>
 						</div>
 						{/*  */}
-						<div className="cursor-pointer">
+						<div className="cursor-pointer ">
 							<ul className="tracking-widest text-gray-400">
 								<li className="mt-2 hover:underline">
 									I-Wallet

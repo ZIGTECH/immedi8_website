@@ -34,7 +34,7 @@ export const Home = () => {
 				appId="<APP_ID>"
 				htmlRef="<REF_STRING>"
 			/> */}
-			,
+
 			<Header />
 			<section>
 				<Banner />

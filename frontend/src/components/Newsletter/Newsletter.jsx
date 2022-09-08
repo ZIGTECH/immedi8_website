@@ -24,8 +24,10 @@ export const Newsletter = () => {
 								className="hidden lg:block"
 								width={100}
 							/>
-							<div className="ml-5 mb-5">
-								<h2>Newsletter Subscriber</h2>
+							<div className="ml-5 mb-5 md:w-full">
+								<h2 className="md:text-center">
+									Newsletter Subscriber
+								</h2>
 							</div>
 						</div>
 

@@ -56,7 +56,7 @@ export const Choose = () => {
 		<>
 			<div className="container mx-auto ">
 				<div className="p-10 lg:p-32 lg:pt-20">
-					<p className="text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold">
+					<p className="lg:mb-10 text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold">
 						Why Choose Us
 					</p>
 
@@ -66,7 +66,7 @@ export const Choose = () => {
 						data-aos-duration="3000">
 						{data.map((data, i) => (
 							<>
-								<div class="max-w-sm mb-5 bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700">
+								<div class="max-w-sm mb-5 hover:transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300  bg-white rounded-lg border border-gray-200 shadow-lg dark:bg-gray-800 dark:border-gray-700">
 									<div className="bg-red-500">
 										<img
 											class="rounded-t-lg md:h-72 rounded-xl"
