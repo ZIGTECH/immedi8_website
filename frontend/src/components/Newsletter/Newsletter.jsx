@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../../assets/images/logo.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const style = {
 	background: "#1c1b1b",
@@ -12,6 +14,18 @@ const style2 = {
 };
 
 export const Newsletter = () => {
+	useEffect(() => {
+		AOS.init({
+			offset: 120,
+			delay: 0,
+			duration: 400,
+			easing: "ease",
+			once: false,
+			mirror: false,
+			anchorPlacement: "top-bottom",
+		});
+	}, []);
+
 	return (
 		<>
 			<div style={style} className="">
@@ -19,6 +33,8 @@ export const Newsletter = () => {
 					<div className="lg:grid lg:grid-cols-2 lg:gap-10 lg:mt-10 lg:items-center">
 						<div className="flex items-center">
 							<img
+								data-aos="zoom-in-down"
+								data-aos-duration="3000"
 								src={logo}
 								alt="The zigtech logo"
 								className="hidden lg:block"

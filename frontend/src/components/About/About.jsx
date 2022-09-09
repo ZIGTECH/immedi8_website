@@ -117,7 +117,7 @@ export const About = () => {
 					</div>
 
 					<div
-						className="hidden lg:block w-full p-10 mt-0 md:mt-10"
+						className="hidden lg:block w-full mt-0 md:mt-10"
 						data-aos="fade-left"
 						data-aos-duration="3000">
 						<Slider {...settings} className="text-center">
@@ -125,28 +125,28 @@ export const About = () => {
 								<img
 									src={about1}
 									alt="immedi8 finace image"
-									className="h-[600px] rounded-xl"
+									className="h-[600px] w-full rounded-xl"
 								/>
 							</div>
 							<div className="rounded-xl">
 								<img
 									src={about2}
 									alt="immedi8 finace image"
-									className="h-[600px] rounded-xl"
+									className="h-[600px] w-full rounded-xl"
 								/>
 							</div>
 							<div className="rounded-xl">
 								<img
 									src={about3}
 									alt="immedi8 finace image"
-									className="h-[600px] rounded-xl"
+									className="h-[600px] w-full rounded-xl"
 								/>
 							</div>
 							<div className="rounded-xl">
 								<img
 									src={about4}
 									alt="immedi8 finace image"
-									className="h-[600px] rounded-xl"
+									className="h-[600px] w-full rounded-xl"
 								/>
 							</div>
 						</Slider>

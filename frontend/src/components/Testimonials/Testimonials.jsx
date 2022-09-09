@@ -123,20 +123,26 @@ export const Testimonials = () => {
 	return (
 		<>
 			<div className="container mx-auto p-10 lg:p-32 lg:pt-20 lg:pb-20">
-				<p className="text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold">
+				<p
+					className="text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold"
+					data-aos="zoom-in-down"
+					data-aos-duration="3000">
 					Testimonials
 				</p>
 
 				{/*  */}
 				<div className="lg:grid lg:grid-cols-2 lg:gap-10 items-center">
-					<div className="text-center lg:text-start mb-5">
+					<div
+						className="text-center lg:text-start mb-5"
+						data-aos="zoom-in-down"
+						data-aos-duration="3000">
 						<h2 className="font-bold">
 							What Our Clients says About <br /> Immedi8 Finance.
 						</h2>
 					</div>
 
 					{/*  */}
-					<div>
+					<div data-aos="fade-left" data-aos-duration="3000">
 						<p className="text-justify">
 							Lorem ipsum, dolor sit amet consectetur adipisicing
 							elit. Neque accusantium veniam reiciendis facere rem
@@ -149,7 +155,10 @@ export const Testimonials = () => {
 
 				<Slider {...settings} className="mx-auto lg:my-10">
 					{data.map((d, i) => (
-						<div className="group grid grid-cols-3 mt-20">
+						<div
+							className="group grid grid-cols-3 mt-20"
+							data-aos="zoom-out-up"
+							data-aos-duration="3000">
 							<>
 								<div
 									key={i}

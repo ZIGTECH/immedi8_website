@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
 	payment,
 	rates,
@@ -6,6 +6,8 @@ import {
 	reliable,
 	instantcash,
 } from "../../assets/main";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const style = {
 	background: "white",
@@ -13,6 +15,18 @@ const style = {
 };
 
 export const Choose = () => {
+	useEffect(() => {
+		AOS.init({
+			offset: 120,
+			delay: 0,
+			duration: 400,
+			easing: "ease",
+			once: false,
+			mirror: false,
+			anchorPlacement: "top-bottom",
+		});
+	}, []);
+
 	const data = [
 		{
 			id: 1,
@@ -56,13 +70,16 @@ export const Choose = () => {
 		<>
 			<div className="container mx-auto ">
 				<div className="p-10 lg:p-32 lg:pt-20">
-					<p className="lg:mb-10 text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold">
+					<p
+						className="lg:mb-10 text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold"
+						data-aos="zoom-in-down"
+						data-aos-duration="3000">
 						Why Choose Us
 					</p>
 
 					<div
 						className="md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3"
-						data-aos="fade-bottom-left"
+						data-aos="zoom-in-up"
 						data-aos-duration="3000">
 						{data.map((data, i) => (
 							<>

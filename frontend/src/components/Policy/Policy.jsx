@@ -33,7 +33,10 @@ export const Policy = () => {
 		<>
 			<div className="container mx-auto p-16 ">
 				<div className="flex">
-					<div className="flex-1 w-full">
+					<div
+						className="flex-1 w-full"
+						data-aos="zoom-out-up"
+						data-aos-duration="3000">
 						<p
 							className="text-center lg:text-start text-xl text-blue-900 font-extrabold mb-10"
 							data-aos="fade-up"
@@ -1531,7 +1534,10 @@ export const Policy = () => {
 					{/* ACCORDION */}
 
 					{/* IMAGE */}
-					<div className="hidden lg:block flex-1 w-1/4 ">
+					<div
+						className="hidden lg:block flex-1 w-1/4"
+						data-aos="flip-left"
+						data-aos-duration="3000">
 						<div>
 							<img src={policy} alt="policy image" width="80%" />
 						</div>

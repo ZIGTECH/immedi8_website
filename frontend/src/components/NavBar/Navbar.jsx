@@ -59,8 +59,7 @@ const Navbar = () => {
 								<img
 									src={logo}
 									alt="The zigtech logo"
-									// width={80}
-									className="w-20"
+									className="w-40"
 								/>
 							</div>
 							{/* ) : null} */}

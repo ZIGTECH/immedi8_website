@@ -43,8 +43,8 @@ const Header = () => {
 					data-aos-duration="3000"
 					className={
 						navbar
-							? "main__navbar active bg-red-700 font-extrabold fixed top-0 w-full header z-50 h-32 text-black "
-							: " fixed top-0 w-full header z-50 p-5 "
+							? "main__navbar active bg-red-700 font-extrabold fixed top-0 w-full header z-50 h-48 text-black "
+							: " fixed top-0 w-full header z-50 p-5"
 					}>
 					<div
 						className={
