@@ -1,16 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-// import { Boxes } from "../Boxes/Boxes";
-// import { HiCurrencyDollar } from "react-icons/hi";
-// import { BsBank } from "react-icons/bs";
-import {
-	MdAccountBalance,
-	MdMoney,
-	MdOutlinePayments,
-	MdPayment,
-} from "react-icons/md";
-import { MdSendToMobile } from "react-icons/md";
 import {
 	ifx,
 	iwallet,
@@ -114,13 +104,19 @@ export const Services = () => {
 			<div
 				className="container mx-auto text-white p-10 lg:p-32 lg:pt-20 lg:pb-20"
 				id="service">
-				<p className="text-center lg:text-start text-2xl text-blue-700 mb-3 md:mb-5 ">
+				<p
+					className="text-center lg:text-start text-2xl text-blue-700 mb-3 md:mb-5 "
+					data-aos="zoom-in-down"
+					data-aos-duration="3000">
 					What We Do
 				</p>
 
 				{/*  */}
 				<div className="lg:grid lg:grid-cols-2 lg:gap-10 items-center">
-					<div className="text-center lg:text-start mb-5">
+					<div
+						className="text-center lg:text-start mb-5"
+						data-aos="zoom-in-down"
+						data-aos-duration="3000">
 						<h2 className="font-bold">
 							We Ensure Best Financial <br /> Service For Our
 							Client.
@@ -128,7 +124,7 @@ export const Services = () => {
 					</div>
 
 					{/*  */}
-					<div>
+					<div data-aos="zoom-in-up" data-aos-duration="3000">
 						<p className="text-justify  md:text-xl">
 							Our existence was borne out of the need to provide
 							the needed, Affordable, Reliable and fast

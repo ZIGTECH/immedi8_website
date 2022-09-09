@@ -13,7 +13,7 @@ import { Services } from "../../components/Services/Services";
 import { Testimonials } from "../../components/Testimonials/Testimonials";
 import { Choose } from "../../components/WhyUs/Choose";
 import { Banner } from "../../components/Banner/Banner";
-// import MessengerCustomerChat from "react-messenger-customer-chat";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 const serviceStyle = {
 	background: "#222121",
@@ -29,11 +29,10 @@ const contactStyle = {
 export const Home = () => {
 	return (
 		<div className="">
-			{/* <MessengerCustomerChat
-				pageId="<PAGE_ID>"
-				appId="<APP_ID>"
-				htmlRef="<REF_STRING>"
-			/> */}
+			<MessengerCustomerChat
+				pageId="100085349928742"
+				appId="490753355830260"
+			/>
 
 			<Header />
 			<section>

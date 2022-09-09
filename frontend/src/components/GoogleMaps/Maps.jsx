@@ -19,5 +19,5 @@ const Maps = props => {
 };
 
 export default GoogleApiWrapper({
-	apiKey: process.env.GOOGLE_MAP_API_KEY,
+	apiKey: "AIzaSyCsUyashaHsw4wrntQ_QCbFLHSn2BK2yS0",
 })(Maps);
