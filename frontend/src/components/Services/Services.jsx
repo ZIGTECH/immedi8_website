@@ -10,7 +10,7 @@ import {
 	itop,
 	paymentService,
 	cashCollection,
-	bank,
+	bankLogo,
 } from "../../assets/main";
 
 const style = {
@@ -32,6 +32,25 @@ export const Services = () => {
 	}, []);
 
 	const data = [
+		{
+			id: 1,
+			title: "Bank Deposit (Online)",
+			content: "We Can Deposit in to Over 1,000 Banks Around The World",
+			icon: bankLogo,
+		},
+		{
+			id: 1,
+			title: "Payment Service",
+			content:
+				"We are a World Wide payment service providing leverage and electronic money transfer services",
+			icon: paymentService,
+		},
+		{
+			id: 2,
+			title: "Cash Collection",
+			content: "Fast Cash Pickup from our Large Network of Locations",
+			icon: cashCollection,
+		},
 		{
 			id: 3,
 			title: "Mobile-Wallet (I-Wallet)",
@@ -77,28 +96,6 @@ export const Services = () => {
 		},
 	];
 
-	const data2 = [
-		{
-			id: 1,
-			title: "Bank Deposit (Online)",
-			content: "We Can Deposit in to Over 1,000 Banks Around The World",
-			icon: bank,
-		},
-		{
-			id: 1,
-			title: "Payment Service",
-			content:
-				"We are a World Wide payment service providing leverage and electronic money transfer services",
-			icon: paymentService,
-		},
-		{
-			id: 2,
-			title: "Cash Collection",
-			content: "Fast Cash Pickup from our Large Network of Locations",
-			icon: cashCollection,
-		},
-	];
-
 	return (
 		<>
 			<div
@@ -139,7 +136,7 @@ export const Services = () => {
 					className="md:grid md:grid-cols-2 md:gap-10 md:mt-5 lg:grid-cols-3"
 					data-aos="fade-up"
 					data-aos-duration="3000">
-					{data2.map((d, i) => (
+					{/* {data2.map((d, i) => (
 						<>
 							<div
 								style={style}
@@ -162,7 +159,7 @@ export const Services = () => {
 								</p>
 							</div>
 						</>
-					))}
+					))} */}
 					{data.map((d, i) => (
 						<>
 							<div
@@ -171,14 +168,14 @@ export const Services = () => {
 								className="group shadow-2xl w-full h-[530px] p-10 mt-8 md:mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
 								<div
 									style={style}
-									className="flex mx-auto w-32 rounded-full mb-5 shadow-2xl md:flex-none md:mx-0">
+									className="flex mx-auto w-32 rounded-full mb-10 shadow-2xl md:flex-none md:mx-0">
 									<img
 										src={d.icon}
 										alt=""
-										className="group-hover:transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300 w-full  h-32 rounded-full"
+										className="group-hover:transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300 w-full  h-32 rounded-full object-fill"
 									/>
 								</div>
-								<p className="group-hover:text-slate-200 text-center md:text-start text-2xl font-extrabold mb-3">
+								<p className="group-hover:text-slate-200 text-center md:text-start text-2xl font-extrabold mb-5 font-sans">
 									{d.title}
 								</p>
 								<p className="text-center md:text-justify text-xl">
