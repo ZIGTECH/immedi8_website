@@ -39,11 +39,9 @@ const Header = () => {
 		<>
 			<header className="" style={style}>
 				<nav
-					data-aos="fade-up"
-					data-aos-duration="3000"
 					className={
 						navbar
-							? "main__navbar active bg-red-700 font-extrabold fixed top-0 w-full header z-50 h-48 text-black "
+							? "main__navbar active bg-red-700 font-extrabold fixed top-0 w-full header z-50 h-40 text-black shadow-lg"
 							: " fixed top-0 w-full header z-50 p-5"
 					}>
 					<div
@@ -58,7 +56,7 @@ const Header = () => {
 									? "main__navbar active container mx-auto text-black"
 									: "container mx-auto"
 							}>
-							<Navbar />
+							<Navbar navbar={navbar} />
 						</div>
 					</div>
 				</nav>

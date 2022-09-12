@@ -23,7 +23,7 @@ import cashCollection from "./images/cashCollection.jpeg";
 import AppStore from "./images/AppStore.png";
 import GooglePlay from "./images/GooglePlay.png";
 import kjaw1 from "./images/kjaw1.jpeg";
-import bank from "./images/bank.jpeg";
+import bankLogo from "./images/bankLogo.jpeg";
 import banner1 from "./images/bannerImages/banner1.jpeg";
 import banner2 from "./images/bannerImages/banner2.jpeg";
 import banner3 from "./images/bannerImages/banner3.jpeg";
@@ -60,7 +60,7 @@ export {
 	policy,
 	paymentService,
 	cashCollection,
-	bank,
+	bankLogo,
 	banner1,
 	banner2,
 	banner3,

@@ -13,7 +13,9 @@ import { Services } from "../../components/Services/Services";
 import { Testimonials } from "../../components/Testimonials/Testimonials";
 import { Choose } from "../../components/WhyUs/Choose";
 import { Banner } from "../../components/Banner/Banner";
+import logo from "../../assets/images/logo.png";
 import MessengerCustomerChat from "react-messenger-customer-chat";
+import FloatingWhatsApp from "react-floating-whatsapp";
 
 const serviceStyle = {
 	background: "#222121",
@@ -29,9 +31,22 @@ const contactStyle = {
 export const Home = () => {
 	return (
 		<div className="">
+			{/* Facebook Messenger */}
 			<MessengerCustomerChat
 				pageId="100085349928742"
 				appId="490753355830260"
+			/>
+
+			{/* Whatsapp messenger chat */}
+			<FloatingWhatsApp
+				phoneNumber={process.env.WHATSAPP_NUMBER}
+				accountName="Immedi8 Finance"
+				avatar={logo}
+				chatMessage="Hello Dear, Thank you for contacting Immedi8 Finance. How can we help you?"
+				allowClickAway="true"
+				allowEsc="true"
+				height={500}
+				className="relative z-50"
 			/>
 
 			<Header />
@@ -75,6 +90,11 @@ export const Home = () => {
 			<section>
 				<Footer />
 			</section>
+
+			<script
+				src="https://apps.elfsight.com/p/platform.js"
+				defer></script>
+			<div class="elfsight-app-6adb5a65-d536-4072-969d-9f09412fb95d"></div>
 		</div>
 	);
 };

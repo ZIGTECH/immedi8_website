@@ -7,7 +7,7 @@ module.exports = ({ env }) => ({
       database: env('DATABASE_NAME', 'immedi8_DB'),
       user: env('DATABASE_USERNAME', 'root'),
       password: env('DATABASE_PASSWORD', 'password'),
-      ssl: env.bool('DATABASE_SSL', true),
+      ssl: env.bool('DATABASE_SSL', false),
     },
   },
 });
