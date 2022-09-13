@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import videoBg from "../../assets/video/immedi8Video.mp4";
 import { Button } from "@material-tailwind/react";
+import { getHeroTitle } from "../../services/apiServices";
 // import "./hero-section.css";
 
 const buttonStyle = {
@@ -24,6 +25,19 @@ const videoStyle = {
 };
 
 const HeroSection = () => {
+	const [heroTitle, setheroTitle] = useState("");
+
+	const getTitle = async () => {
+		const data = await getHeroTitle();
+		setheroTitle(data.data.attributes.title);
+		// console.log(heroTitle);
+		// console.log(data);
+	};
+
+	useEffect(() => {
+		getTitle();
+	}, []);
+
 	return (
 		<>
 			<div className="hero__slider " id="home">
@@ -54,9 +68,8 @@ const HeroSection = () => {
 									<div className="hidden lg:block text-white">
 										<p
 											style={textStyle}
-											className="sm:text-[20px]">
-											International Money Transfer <br />{" "}
-											WorldWide
+											className="sm:text-[20px] mt-24 text-extrabold lg:text-3xl">
+											{heroTitle}
 										</p>
 
 										<div className="flex justify-center align-center pt-20">

@@ -1,10 +1,36 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { about1, about2, about3, about4 } from "../../assets/main";
+import { getAboutSectionsData, getHeroTitle } from "../../services/apiServices";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export const About = () => {
+	const [title, setTitle] = useState("");
+	const [subtitle, setSubtitle] = useState("");
+	const [content1, setContent1] = useState("");
+	const [content2, setContent2] = useState("");
+	const [content3, setContent3] = useState("");
+
+	const getAboutData = async () => {
+		const data = await getAboutSectionsData();
+		// console.log(data);
+
+		setTitle(data.data[0].attributes.sectionTitle);
+		setSubtitle(data.data[0].attributes.sectionSubtitle);
+		setContent1(data.data[0].attributes.sectionContent1);
+		setContent2(data.data[0].attributes.sectionContent2);
+		setContent3(data.data[0].attributes.sectionContent3);
+		// console.log(subtitle);
+		// console.log(content);
+	};
+
+	useEffect(() => {
+		getAboutData();
+	}, []);
+
+	// Slider array
 	const sliderImages = [
 		{
 			id: 1,
@@ -24,6 +50,7 @@ export const About = () => {
 		},
 	];
 
+	// AOS Settings
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -64,6 +91,7 @@ export const About = () => {
 		],
 	};
 
+	// Initialise AOS
 	useEffect(() => {
 		AOS.init({
 			offset: 120,
@@ -82,37 +110,38 @@ export const About = () => {
 				<div
 					className="lg:grid lg:grid-cols-2 lg:gap-5 lg:p-10 p-10
 				">
-					<div className="mb-5 lg:mt-10">
+					<div className="mb-5 lg:mt-20">
 						<p
 							className="text-center lg:text-start text-2xl text-blue-700 font-bold mb-2 lg:mb-5"
 							data-aos="fade-down"
 							data-aos-duration="3000">
-							Who We Are
+							{title ?? title}
 						</p>
 						<h2
 							className="text-center lg:text-start mb-5 md:mb-7"
 							data-aos="fade-up"
 							data-aos-duration="3000">
-							Immedi8 Financial <br /> Service.
+							{subtitle ?? subtitle}
 						</h2>
 						<p
-							className="text-justify leading-relaxed"
+							className="text-justify tracking-wide leading-relaxed"
 							data-aos="fade-right"
 							data-aos-duration="3000">
-							We are a Financial Services Institution specializing
-							In Money Services Business, International Remittance
-							(wholesale and retail) and Foreign Exchange &
-							Currency Services . <br /> <br />
-							E-Commerce and FinTech Solutions. Our existence was
-							borne out of the need to provide the needed,
-							Affordable, Reliable and fast transaction delivery
-							platform via which transactional needs and
-							investment requirements are met both locally and
-							internationally. <br /> <br /> We became the
-							preferred choice for our customers because we
-							emphasized reliability, affordability, and prompt
-							delivery of transactions at the core of our
-							services.{" "}
+							{content1 ?? content1}
+						</p>
+						<br />
+						<p
+							className="text-justify tracking-wide leading-relaxed"
+							data-aos="fade-right"
+							data-aos-duration="3000">
+							{content2 ?? content2}
+						</p>
+						<br />
+						<p
+							className="text-justify tracking-wide leading-relaxed"
+							data-aos="fade-down"
+							data-aos-duration="3000">
+							{content3 ?? content3}
 						</p>
 					</div>
 

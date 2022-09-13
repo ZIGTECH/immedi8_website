@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import {
@@ -12,13 +12,41 @@ import {
 	cashCollection,
 	bankLogo,
 } from "../../assets/main";
-
-const style = {
-	background: "#2f2f2f",
-	// border: "1px solid #222121",
-};
+import { ServiceBox } from "../ServiceBox/ServiceBox";
+import { getServiceData } from "../../services/apiServices";
 
 export const Services = () => {
+	const [title, settitle] = useState([]);
+	const [bank, setbank] = useState([]);
+	const [payment, setpayment] = useState([]);
+	const [cash, setcash] = useState([]);
+	const [iwallets, setiwallets] = useState([]);
+	const [iloans, setiloans] = useState([]);
+	const [ileases, setileases] = useState([]);
+	const [ifxx, setifxx] = useState([]);
+	const [itops, setitops] = useState([]);
+	const [ipowers, setipowers] = useState([]);
+
+	// Get Services Data from Strapi
+	const serviceData = async () => {
+		const data = await getServiceData();
+		// console.log(data.data);
+		setbank(data.data[0].attributes);
+		setpayment(data.data[1].attributes);
+		setcash(data.data[2].attributes);
+		setiwallets(data.data[3].attributes);
+		setiloans(data.data[4].attributes);
+		setileases(data.data[5].attributes);
+		setifxx(data.data[6].attributes);
+		setitops(data.data[7].attributes);
+		setipowers(data.data[8].attributes);
+		settitle(data.data[9].attributes);
+	};
+
+	useEffect(() => {
+		serviceData();
+	}, []);
+
 	useEffect(() => {
 		AOS.init({
 			offset: 120,
@@ -31,71 +59,6 @@ export const Services = () => {
 		});
 	}, []);
 
-	const data = [
-		{
-			id: 1,
-			title: "Bank Deposit (Online)",
-			content: "We Can Deposit in to Over 1,000 Banks Around The World",
-			icon: bankLogo,
-		},
-		{
-			id: 1,
-			title: "Payment Service",
-			content:
-				"We are a World Wide payment service providing leverage and electronic money transfer services",
-			icon: paymentService,
-		},
-		{
-			id: 2,
-			title: "Cash Collection",
-			content: "Fast Cash Pickup from our Large Network of Locations",
-			icon: cashCollection,
-		},
-		{
-			id: 3,
-			title: "Mobile-Wallet (I-Wallet)",
-			content:
-				"Our mobile wallet solution facilitates E-money transactions and movement of funds into out integrated E-wallet partners, Banks and other finaancial institutions. ",
-			icon: iwallet,
-		},
-
-		{
-			id: 4,
-			title: "Micro Lending (I-Loan)",
-			content:
-				"Our new micro lending and quick loan services provides comfort and relief financial pressure from our clients and their families, Easy, Quick and fast decisions. (currently in Africa only)",
-			icon: iloan,
-		},
-		{
-			id: 5,
-			title: "BNPL - Buy Now / Pay Later (I-Lease)",
-			content:
-				"Buy now pay later (BNPL) is available on our lending platform providing our customers the ability to purchase product and services now and pay at a later date. I.E Our smartphone finance (Africa)",
-			icon: ilease,
-		},
-		{
-			id: 6,
-			title: "Currency Dealings (I-Fx)",
-			content:
-				"Our I-FX trading platform provides on the spots online Foreign currency buying or hedgings portfolio for our clientelle. ",
-			icon: ifx,
-		},
-		{
-			id: 7,
-			title: "Mobile Top-Ups (I-TopUp)",
-			content:
-				"Our I-TopUp, mobile credit and data purchasing platform enable clients to purchase their choosen mobile service provider's data and mobile credit.",
-			icon: itop,
-		},
-		{
-			id: 8,
-			title: "Electricity Purchase (I-Power)",
-			content:
-				"Our electricity buying platform avails both prepaid and postpaid electricity purchasing functionality for our clients and the services is been rendered in several countries. (Africa) ",
-			icon: ipower,
-		},
-	];
-
 	return (
 		<>
 			<div
@@ -105,7 +68,7 @@ export const Services = () => {
 					className="text-center lg:text-start text-2xl text-blue-700 mb-3 md:mb-5 "
 					data-aos="zoom-in-down"
 					data-aos-duration="3000">
-					What We Do
+					{title?.title}
 				</p>
 
 				{/*  */}
@@ -123,11 +86,7 @@ export const Services = () => {
 					{/*  */}
 					<div data-aos="zoom-in-up" data-aos-duration="3000">
 						<p className="text-justify  md:text-xl">
-							Our existence was borne out of the need to provide
-							the needed, Affordable, Reliable and fast
-							transaction delivery platform via which
-							transactional needs and investment requirements are
-							met both locally and internationally.
+							{title?.content}
 						</p>
 					</div>
 				</div>
@@ -136,56 +95,118 @@ export const Services = () => {
 					className="md:grid md:grid-cols-2 md:gap-10 md:mt-5 lg:grid-cols-3"
 					data-aos="fade-up"
 					data-aos-duration="3000">
-					{/* {data2.map((d, i) => (
-						<>
-							<div
-								style={style}
-								key={i}
-								className="group h-[530px] shadow-2xl w-full lg:h-96 p-10 mt-8 md:mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-lg cursor-pointer ">
-								<div
-									style={style}
-									className="flex md:flex-none mx-auto w-32 rounded-full mb-5 shadow-2xl md:mx-0">
-									<img
-										src={d.icon}
-										alt=""
-										className="group-hover:transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300 w-full border h-32 rounded-full"
-									/>
-								</div>
-								<p className="group-hover:text-slate-200 text-center md:text-start text-2xl font-extrabold mb-3">
-									{d.title}
-								</p>
-								<p className="text-center md:text-justify text-xl">
-									{d.content}
-								</p>
-							</div>
-						</>
-					))} */}
-					{data.map((d, i) => (
-						<>
-							<div
-								style={style}
-								key={i}
-								className="group shadow-2xl w-full h-[530px] p-10 mt-8 md:mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
-								<div
-									style={style}
-									className="flex mx-auto w-32 rounded-full mb-10 shadow-2xl md:flex-none md:mx-0">
-									<img
-										src={d.icon}
-										alt=""
-										className="group-hover:transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300 w-full  h-32 rounded-full object-fill"
-									/>
-								</div>
-								<p className="group-hover:text-slate-200 text-center md:text-start text-2xl font-extrabold mb-5 font-sans">
-									{d.title}
-								</p>
-								<p className="text-center md:text-justify text-xl">
-									{d.content}
-								</p>
-							</div>
-						</>
-					))}
+					<ServiceBox
+						icon={bankLogo}
+						title={bank?.title}
+						content={bank?.content}
+					/>
+					<ServiceBox
+						icon={paymentService}
+						title={payment?.title}
+						content={payment?.content}
+					/>
+					<ServiceBox
+						icon={cashCollection}
+						title={cash?.title}
+						content={cash?.content}
+					/>
+					<ServiceBox
+						icon={iwallet}
+						title={iwallets?.title}
+						content={iwallets?.content}
+					/>
+					<ServiceBox
+						icon={iloan}
+						title={iloans?.title}
+						content={iloans?.content}
+					/>
+					<ServiceBox
+						icon={ilease}
+						title={ileases?.title}
+						content={ileases?.content}
+					/>
+					<ServiceBox
+						icon={ifx}
+						title={ifxx?.title}
+						content={ifxx?.content}
+					/>
+					<ServiceBox
+						icon={itop}
+						title={itops?.title}
+						content={itops?.content}
+					/>
+					<ServiceBox
+						icon={ipower}
+						title={ipowers?.title}
+						content={ipowers?.content}
+					/>
 				</div>
 			</div>
 		</>
 	);
 };
+
+// const data = [
+// 	{
+// 		id: 1,
+// 		title: "Bank Deposit (Online)",
+// 		content: "We Can Deposit in to Over 1,000 Banks Around The World",
+// 		icon: bankLogo,
+// 	},
+// 	{
+// 		id: 2,
+// 		title: "Payment Service",
+// 		content:
+// 			"We are a World Wide payment service providing leverage and electronic money transfer services",
+// 		icon: paymentService,
+// 	},
+// 	{
+// 		id: 3,
+// 		title: "Cash Collection",
+// 		content: "Fast Cash Pickup from our Large Network of Locations",
+// 		icon: cashCollection,
+// 	},
+// 	{
+// 		id: 4,
+// 		title: "Mobile-Wallet (I-Wallet)",
+// 		content:
+// 			"Our mobile wallet solution facilitates E-money transactions and movement of funds into out integrated E-wallet partners, Banks and other finaancial institutions. ",
+// 		icon: iwallet,
+// 	},
+
+// 	{
+// 		id: 5,
+// 		title: "Micro Lending (I-Loan)",
+// 		content:
+// 			"Our new micro lending and quick loan services provides comfort and relief financial pressure from our clients and their families, Easy, Quick and fast decisions. (currently in Africa only)",
+// 		icon: iloan,
+// 	},
+// 	{
+// 		id: 6,
+// 		title: "BNPL - Buy Now / Pay Later (I-Lease)",
+// 		content:
+// 			"Buy now pay later (BNPL) is available on our lending platform providing our customers the ability to purchase product and services now and pay at a later date. I.E Our smartphone finance (Africa)",
+// 		icon: ilease,
+// 	},
+// 	{
+// 		id: 7,
+// 		title: "Currency Dealings (I-Fx)",
+// 		content:
+// 			"Our I-FX trading platform provides on the spots online Foreign currency buying or hedgings portfolio for our clientelle. ",
+// 		icon: ifx,
+// 	},
+// 	{
+// 		id: 8,
+// 		title: "Mobile Top-Ups (I-TopUp)",
+// 		content:
+// 			"Our I-TopUp, mobile credit and data purchasing platform enable clients to purchase their choosen mobile service provider's data and mobile credit.",
+// 		icon: itop,
+// 	},
+// 	{
+// 		id: 9,
+// 		title: "Electricity Purchase (I-Power)",
+// 		content:
+// 			"Our electricity buying platform avails both prepaid and postpaid electricity purchasing functionality for our clients and the services is been rendered in several countries. (Africa) ",
+// 		icon: ipower,
+// 	},
+// ];
