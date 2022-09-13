@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "hero_titiles",
+  "info": {
+    "singularName": "hero-titile",
+    "pluralName": "hero-titiles",
+    "displayName": "HeroTitle",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

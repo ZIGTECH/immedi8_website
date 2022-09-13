@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import img1 from "../../assets/images/testimonials.jpg";
 import { kjaw1 } from "../../assets/main";
 import Slider from "react-slick";
+import { TestimonialSlider } from "./TestimonialSlider";
+import { getTestimonialData } from "../../services/apiServices";
 
 const style = {
 	background: "#2f2f2f",
@@ -11,6 +13,22 @@ const style = {
 };
 
 export const Testimonials = () => {
+	const [testimonial1, settestimonial1] = useState([]);
+	const [testimonial2, settestimonial2] = useState([]);
+	const [testimonial3, settestimonial3] = useState([]);
+
+	const testimonialData = async () => {
+		const data = await getTestimonialData();
+		console.log(data);
+		settestimonial1(data.data[0].attributes);
+		settestimonial2(data.data[1].attributes);
+		settestimonial3(data.data[2].attributes);
+	};
+
+	useEffect(() => {
+		testimonialData();
+	}, []);
+
 	const settings = {
 		dots: true,
 		infinite: true,
@@ -64,62 +82,6 @@ export const Testimonials = () => {
 		});
 	}, []);
 
-	const data = [
-		{
-			id: 1,
-			name: "K Jawara",
-			image: kjaw1,
-			title: "CXO, Fankanta Technology",
-			content:
-				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
-		},
-		{
-			id: 2,
-			name: "Shyn Sidibeh",
-			image: img1,
-			title: "CEO, SunShyn Poultry Farms",
-
-			content:
-				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
-		},
-		{
-			id: 3,
-			name: "Shyn Sidibeh",
-			image: img1,
-			title: "CEO, SunShyn Poultry Farms",
-
-			content:
-				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
-		},
-		{
-			id: 4,
-			name: "Shyn Sidibeh",
-			image: img1,
-			title: "CEO, SunShyn Poultry Farms",
-
-			content:
-				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
-		},
-		{
-			id: 5,
-			name: "Shyn Sidibeh",
-			image: img1,
-			title: "CEO, SunShyn Poultry Farms",
-
-			content:
-				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
-		},
-		{
-			id: 6,
-			name: "Shyn Sidibeh",
-			image: img1,
-			title: "CEO, SunShyn Poultry Farms",
-
-			content:
-				"lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolore magna aliquid ex ea commodo consequat. Lorem Ipsum lorem Ipsum lorem Ipsum, consectetur adipisicing  elit, sed diam nonumy eirmod tempor incididunt ut labore et dolo",
-		},
-	];
-
 	return (
 		<>
 			<div className="container mx-auto p-10 lg:p-32 lg:pt-20 lg:pb-20">
@@ -153,39 +115,42 @@ export const Testimonials = () => {
 					</div>
 				</div>
 
-				<Slider {...settings} className="mx-auto lg:my-10">
-					{data.map((d, i) => (
-						<div
-							className="group grid grid-cols-3 mt-20"
-							data-aos="zoom-out-up"
-							data-aos-duration="3000">
-							<>
-								<div
-									key={i}
-									className="group-hover:bg-slate-100 lg:group-hover:scale-75 lg:translate-x-4 lg:skew-y-3 md:transform-none h-72 p-5 shadow-xl mx-5 rounded-xl cursor-pointer">
-									<p className="text-center mb-3 lg:mb-10">
-										{d.content}
-									</p>
-									<div className="">
-										<img
-											src={d.image}
-											alt=""
-											width="100px"
-											className="mx-auto rounded-[50%]"
-										/>
-									</div>
-									<div className="text-center mt-5">
-										<span className="font-extrabold mb-3">
-											{d.name}
-										</span>
-										<p className="mb-10 font-sans">
-											{d.title}
-										</p>
-									</div>
-								</div>
-							</>
-						</div>
-					))}
+				<Slider
+					{...settings}
+					className="mx-auto my-10 md:my-20 lg:my-10">
+					<TestimonialSlider
+						image={img1}
+						name={testimonial1?.name}
+						title={testimonial1?.title}
+						content={testimonial1?.content}
+						data-aos="zoom-out-up"
+						data-aos-duration="3000"
+					/>
+					<TestimonialSlider
+						image={kjaw1}
+						name={testimonial2?.name}
+						title={testimonial2?.title}
+						content={testimonial2?.content}
+					/>
+					<TestimonialSlider
+						image={kjaw1}
+						name={testimonial2?.name}
+						title={testimonial2?.title}
+						content={testimonial2?.content}
+					/>
+					<TestimonialSlider
+						image={kjaw1}
+						name={testimonial2?.name}
+						title={testimonial2?.title}
+						content={testimonial2?.content}
+					/>{" "}
+					<TestimonialSlider
+						image={kjaw1}
+						name={testimonial2?.name}
+						title={testimonial2?.title}
+						content={testimonial2?.content}
+					/>
+					{/* </div> */}
 				</Slider>
 			</div>
 		</>

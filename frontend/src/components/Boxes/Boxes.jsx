@@ -6,6 +6,8 @@ const style = {
 };
 
 export const Boxes = ({ icon, title, content }) => {
+	// console.log("testtt");
+	// console.log(icon);
 	return (
 		<div className="">
 			<div className="group" data-aos="fade-up" data-aos-duration="3000">
@@ -15,9 +17,11 @@ export const Boxes = ({ icon, title, content }) => {
 						className="mb-5 group-hover:bg-slate-100 rounded-xl shadow-2xl h-80 p-10 group cursor-pointer">
 						<div className="flex group-hover:animate-pulse group-hover:text-blue-700 transition duration-500 ease-in mb-5">
 							<p
+								// src={icon}
 								className="mx-auto"
 								data-aos="fade-right"
-								data-aos-duration="3000">
+								data-aos-duration="3000"
+								alt={title}>
 								{icon}
 							</p>
 						</div>

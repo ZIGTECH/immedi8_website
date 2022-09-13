@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "choose_sections",
+  "info": {
+    "singularName": "choose-section",
+    "pluralName": "choose-sections",
+    "displayName": "ChooseSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

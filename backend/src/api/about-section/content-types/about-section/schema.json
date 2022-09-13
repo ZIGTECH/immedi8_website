@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_sections",
+  "info": {
+    "singularName": "about-section",
+    "pluralName": "about-sections",
+    "displayName": "aboutSection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "sectionSubtitle": {
+      "type": "string"
+    },
+    "sectionContent1": {
+      "type": "richtext"
+    },
+    "sectionContent2": {
+      "type": "richtext"
+    },
+    "sectionContent3": {
+      "type": "richtext"
+    }
+  }
+}
