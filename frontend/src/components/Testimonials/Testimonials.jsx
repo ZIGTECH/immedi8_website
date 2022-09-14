@@ -19,7 +19,7 @@ export const Testimonials = () => {
 
 	const testimonialData = async () => {
 		const data = await getTestimonialData();
-		console.log(data);
+		// console.log(data);
 		settestimonial1(data.data[0].attributes);
 		settestimonial2(data.data[1].attributes);
 		settestimonial3(data.data[2].attributes);
@@ -105,47 +105,45 @@ export const Testimonials = () => {
 
 					{/*  */}
 					<div data-aos="fade-left" data-aos-duration="3000">
-						<p className="text-justify">
-							Lorem ipsum, dolor sit amet consectetur adipisicing
-							elit. Neque accusantium veniam reiciendis facere rem
-							aperiam quisquam ipsum in porro, optio debitis,
-							deserunt repellat aliquid saepe, eius fuga dolorem!
-							Iusto, necessitatibus!
+						<p className="text-center">
+							We became the preferred choice for our customers because we emphasized reliability, affordability, and prompt delivery of transactions at the core of our services.
 						</p>
 					</div>
 				</div>
 
 				<Slider
 					{...settings}
-					className="mx-auto my-10 md:my-20 lg:my-10">
+					className="mx-auto my-10 md:my-20 lg:my-20"
+					data-aos="zoom-out-up"
+					data-aos-duration="1500"
+				>
 					<TestimonialSlider
-						image={img1}
+						image={kjaw1}
 						name={testimonial1?.name}
 						title={testimonial1?.title}
 						content={testimonial1?.content}
-						data-aos="zoom-out-up"
-						data-aos-duration="3000"
+
 					/>
 					<TestimonialSlider
-						image={kjaw1}
+						image={img1}
 						name={testimonial2?.name}
 						title={testimonial2?.title}
 						content={testimonial2?.content}
 					/>
 					<TestimonialSlider
-						image={kjaw1}
+						image={img1}
 						name={testimonial2?.name}
 						title={testimonial2?.title}
 						content={testimonial2?.content}
 					/>
 					<TestimonialSlider
-						image={kjaw1}
+						image={img1}
 						name={testimonial2?.name}
 						title={testimonial2?.title}
 						content={testimonial2?.content}
 					/>{" "}
 					<TestimonialSlider
-						image={kjaw1}
+						image={img1}
 						name={testimonial2?.name}
 						title={testimonial2?.title}
 						content={testimonial2?.content}

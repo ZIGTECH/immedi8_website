@@ -32,10 +32,10 @@ export const Home = () => {
 	return (
 		<div className="">
 			{/* Facebook Messenger */}
-			<MessengerCustomerChat
+			{/* <MessengerCustomerChat
 				pageId="100085349928742"
 				appId="490753355830260"
-			/>
+			/> */}
 
 			{/* Whatsapp messenger chat */}
 			<FloatingWhatsApp
@@ -78,10 +78,7 @@ export const Home = () => {
 				<Maps />
 			</section>
 			<section
-				className="border"
-				style={{
-					backgroundColor: "#f1f3f4",
-				}}>
+				className="border mt-10">
 				<Regulators />
 			</section>
 			<section>
