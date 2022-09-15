@@ -1,6 +1,5 @@
 import React from "react";
 import { Map, GoogleApiWrapper } from "google-maps-react";
-import env from "react-dotenv";
 
 const Maps = props => {
 	return (
@@ -17,7 +16,7 @@ const Maps = props => {
 		</div>
 	);
 };
-
+console.log(process.env.GOOGLE_MAP_API_KEY);
 export default GoogleApiWrapper({
 	apiKey: "AIzaSyCsUyashaHsw4wrntQ_QCbFLHSn2BK2yS0",
 })(Maps);
