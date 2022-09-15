@@ -12,7 +12,7 @@ export const ServiceBox = ({ icon, title, content }) => {
 			<div
 				style={style}
 				// key={i}
-				className="group shadow-2xl w-full h-[530px] p-10 mt-8 md:mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
+				className="group shadow-2xl w-full h-[530px] md:h-[550px] p-10 mt-8 md:mt-14 transition duration-500 ease-in-out transform sm:hover:scale-105 hover:z-50 hover:border hover:border-blue-800 rounded-sm cursor-pointer ">
 				<div
 					style={style}
 					className="flex mx-auto w-32 rounded-full mb-10 shadow-2xl md:flex-none md:mx-0">
