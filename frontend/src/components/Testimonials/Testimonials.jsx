@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import img1 from "../../assets/images/testimonials.jpg";
-import { kjaw1 } from "../../assets/main";
+import { kjaw1, SaulFrazer, kaku } from "../../assets/main";
 import Slider from "react-slick";
 import { TestimonialSlider } from "./TestimonialSlider";
 import { getTestimonialData } from "../../services/apiServices";
@@ -70,17 +70,17 @@ export const Testimonials = () => {
 		],
 	};
 
-	useEffect(() => {
-		AOS.init({
-			offset: 120,
-			delay: 0,
-			duration: 400,
-			easing: "ease",
-			once: false,
-			mirror: false,
-			anchorPlacement: "top-bottom",
-		});
-	}, []);
+	// useEffect(() => {
+	// 	AOS.init({
+	// 		offset: 300,
+	// 		delay: 10,
+	// 		duration: 900,
+	// 		easing: "ease",
+	// 		once: false,
+	// 		mirror: false,
+	// 		anchorPlacement: "top-bottom",
+	// 	});
+	// }, []);
 
 	return (
 		<>
@@ -97,6 +97,7 @@ export const Testimonials = () => {
 					<div
 						className="text-center lg:text-start mb-5"
 						data-aos="zoom-in-down"
+						data-aos-easing="ease-in-out"
 						data-aos-duration="3000">
 						<h2 className="font-bold">
 							What Our Clients says About <br /> Immedi8 Finance.
@@ -104,7 +105,8 @@ export const Testimonials = () => {
 					</div>
 
 					{/*  */}
-					<div data-aos="fade-left" data-aos-duration="3000">
+					<div data-aos="slide-left" data-aos-duration="2000"
+						data-aos-easing="ease-in-out">
 						<p className="text-center">
 							We became the preferred choice for our customers because we emphasized reliability, affordability, and prompt delivery of transactions at the core of our services.
 						</p>
@@ -125,29 +127,18 @@ export const Testimonials = () => {
 
 					/>
 					<TestimonialSlider
-						image={img1}
+						image={SaulFrazer}
 						name={testimonial2?.name}
 						title={testimonial2?.title}
 						content={testimonial2?.content}
 					/>
 					<TestimonialSlider
-						image={img1}
-						name={testimonial2?.name}
-						title={testimonial2?.title}
-						content={testimonial2?.content}
+						image={kaku}
+						name={testimonial3?.name}
+						title={testimonial3?.title}
+						content={testimonial3?.content}
 					/>
-					<TestimonialSlider
-						image={img1}
-						name={testimonial2?.name}
-						title={testimonial2?.title}
-						content={testimonial2?.content}
-					/>{" "}
-					<TestimonialSlider
-						image={img1}
-						name={testimonial2?.name}
-						title={testimonial2?.title}
-						content={testimonial2?.content}
-					/>
+
 					{/* </div> */}
 				</Slider>
 			</div>

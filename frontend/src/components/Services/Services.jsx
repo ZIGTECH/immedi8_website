@@ -62,7 +62,7 @@ export const Services = () => {
 	return (
 		<>
 			<div
-				className="container mx-auto text-white p-10 lg:p-32 lg:pt-20 lg:pb-20"
+				className="container mx-auto text-white p-10 md:pb-20 lg:p-32 lg:pt-20 lg:pb-20"
 				id="service">
 				<p
 					className="text-center lg:text-start text-2xl text-blue-700 mb-3 md:mb-5 "
@@ -92,13 +92,14 @@ export const Services = () => {
 				</div>
 
 				<div
-					className="md:grid md:grid-cols-2 md:gap-10 md:mt-5 lg:grid-cols-3"
+					className="md:grid md:grid-cols-2 md:gap-10 md:mt-0 lg:grid-cols-3"
 					data-aos="fade-up"
 					data-aos-duration="3000">
 					<ServiceBox
 						icon={bankLogo}
 						title={bank?.title}
 						content={bank?.content}
+						className="lg:mb-0"
 					/>
 					<ServiceBox
 						icon={paymentService}
@@ -109,6 +110,8 @@ export const Services = () => {
 						icon={cashCollection}
 						title={cash?.title}
 						content={cash?.content}
+						className="lg:mb-0"
+
 					/>
 					<ServiceBox
 						icon={iwallet}

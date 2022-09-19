@@ -10,11 +10,11 @@ export const Boxes = ({ icon, title, content }) => {
 	// console.log(icon);
 	return (
 		<div className="">
-			<div className="group" data-aos="fade-up" data-aos-duration="3000">
+			<div className="group" data-aos="slide-up" data-aos-duration="3000">
 				<>
 					<div
 						style={style}
-						className="mb-5 group-hover:bg-slate-100 rounded-xl shadow-2xl h-80 p-10 group cursor-pointer">
+						className="mb-5 group-hover:bg-slate-100 rounded-xl shadow-2xl h-80 p-10 group cursor-pointer border-b-4 border-blue-900">
 						<div className="flex group-hover:animate-pulse group-hover:text-blue-700 transition duration-500 ease-in mb-5">
 							<p
 								// src={icon}

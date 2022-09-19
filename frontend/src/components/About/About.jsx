@@ -108,9 +108,9 @@ export const About = () => {
 		<>
 			<div className="lg:pl-20 lg:pr-20" id="about">
 				<div
-					className="lg:grid lg:grid-cols-2 lg:gap-5 lg:p-10 p-10
+					className="lg:flex lg:justify-between lg:p-10 p-10
 				">
-					<div className="mb-5 lg:mt-20">
+					<div className="mb-5 lg:mt-10 lg:mr-16">
 						<p
 							className="text-center lg:text-start text-2xl text-blue-700 font-bold mb-2 lg:mb-5"
 							data-aos="fade-down"
@@ -146,7 +146,7 @@ export const About = () => {
 					</div>
 
 					<div
-						className="hidden lg:block w-full mt-0 md:mt-10"
+						className="hidden lg:block w-[63%] mt-0 md:mt-10"
 						data-aos="fade-left"
 						data-aos-duration="3000">
 						<Slider {...settings} className="text-center">

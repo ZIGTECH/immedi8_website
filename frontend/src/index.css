@@ -10,13 +10,14 @@
 	/* font-family: "Montserrat", sans-serif; */
 	font-family: "Roboto", sans-serif;
 	/* font-family: "Source Sans Pro", sans-serif; */
-	/* height: "100vh"; */
 }
 
 html,
 body {
 	max-width: 100%;
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	height: "100vh";
 }
 
 h2 {

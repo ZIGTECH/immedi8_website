@@ -1,12 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { toast } from "react-toastify";
 import logo from "../../assets/images/logo.png";
+import { getTrackTransaction } from "../../services/apiServices";
 import { RatesModal } from "../Rates/RatesModal";
+import { TrackModal } from "../TrackTransaction/TrackModal";
 
-const Navbar = props => {
+const Navbar = (props) => {
+
+	return <Child navbar={props.navbar} setView={props.setView} view={props.view} />
+};
+
+export const Child = (props) => {
 	// console.log(props.navbar);
 	const [open, setOpen] = useState(false);
+	const [modalopen, setmodalOpen] = useState(false);
 	const [sidebar, setSidebar] = useState(false);
+	const [reference, setReference] = useState("");
+	const [transaction, settransaction] = useState([])
+	const [showResult, setshowResult] = useState(false);
+	const [foundTransaction, setFoundTransaction] = useState(false);
+
 
 	const navLinks = [
 		{
@@ -43,9 +57,39 @@ const Navbar = props => {
 		// },
 	];
 
+	const handleSearch = async () => {
+		// e.preventDefault();
+		console.log(reference)
+
+		if (reference === "") {
+			toast("Plese enter reference number!")
+		} else {
+			try {
+
+				const data = await getTrackTransaction(reference);
+				console.log(data);
+				if (data.success) {
+					settransaction(data.result);
+					setFoundTransaction(true)
+					setmodalOpen(true);
+					toast("Transaction Found!")
+				} else {
+					toast("Transaction Failed")
+				}
+			} catch (error) {
+				console.log(error.message);
+			}
+		}
+	};
+
+	const handleChange = e => {
+		setReference(e.target.value);
+	};
+
 	const MainNav = () => {
 		return (
 			<>
+				{console.log(transaction)}
 				<div className={"container mx-auto"}>
 					{/* TRACT TRANSACTION */}
 
@@ -63,14 +107,14 @@ const Navbar = props => {
 									alt="The zigtech logo"
 									className={
 										props.navbar
-											? "w-32 cursor-pointer"
-											: "w-40 cursor-pointer"
+											? "w-20 md:w-28 cursor-pointer"
+											: "w-20 md:w-40 cursor-pointer"
 									}
 								/>
 							</Link>
 						</div>
 						{/* ) : null} */}
-						<div className="hidden lg:block w-2/4 text-xl text-extrabold text-white group menu space-x-7 ">
+						<div className="hidden items-center lg:block text-xl text-extrabold text-white group menu space-x-7 ">
 							{navLinks.map((link, i) => (
 								<Link
 									to={link.path}
@@ -80,7 +124,7 @@ const Navbar = props => {
 									duration={1500}
 									key={i}
 									className={
-										"ml-60 hover:underline underline-offset-8 decoration-4 cursor-pointer"
+										"ml-32 hover:underline underline-offset-8 decoration-4 cursor-pointer"
 									}>
 									{link.display}
 								</Link>
@@ -91,7 +135,20 @@ const Navbar = props => {
 						<div className="hidden lg:flex md:items-center">
 							<form className="mr-5">
 								<div class="relative">
-									<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+									<input
+										type="search"
+										name="reference"
+										// value={reference}
+										onChange={handleChange}
+										id="default-search"
+										class="z-20 hover:z-20 block p-2 pr-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg  border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+										placeholder="Track Transaction"
+										required
+									/>
+									<div
+										style={{ cursor: "pointer" }}
+										onClick={() => handleSearch()}
+										class="flex absolute inset-y-0 right-0 items-center pr-3">
 										<svg
 											aria-hidden="true"
 											class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -106,21 +163,8 @@ const Navbar = props => {
 												d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
 										</svg>
 									</div>
-									<input
-										type="search"
-										id="default-search"
-										class="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg  border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-										placeholder="Track Transaction"
-										required
-									/>
 								</div>
 							</form>
-
-							{/* <span className="bg-blue-700 pt-1 pb-1 pr-5 pl-5 rounded text-white text-xl text-bold cursor-pointer hover:animate-bounce">
-									<a href="http://109.228.55.140/mobile-wallet/admin#">
-										Login
-									</a>{" "}
-								</span> */}
 						</div>
 
 						{/* breadcrumbs */}
@@ -333,6 +377,29 @@ const Navbar = props => {
 											</li>
 
 											<li>
+												<a href="#">
+													<button
+														onClick={() =>
+															setSidebar(false)
+														}
+														type="button"
+														class="flex items-center w-full p-2 text-base font-normal text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
+														<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+															class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+
+														>
+															<path strokeLinecap="round" strokeLinejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
+														</svg>
+
+
+														<span class="flex-1 ml-3 text-left whitespace-nowrap">
+															Calculate
+														</span>
+													</button>
+												</a>
+											</li>
+
+											<li>
 												<a href="#send">
 													<button
 														onClick={() =>
@@ -368,7 +435,14 @@ const Navbar = props => {
 								className="cursor-pointer border p-2 rounded bg-blue-900 hover:bg-blue-700">
 								Rates
 							</Link>
+
 							<Link
+								onClick={() => props.setView(!false)}
+								className="cursor-pointer border p-2 rounded bg-blue-900 hover:bg-blue-700">
+								Calculate
+							</Link>
+							<Link
+								to="https://imoney.immedi8money.com"
 								className={
 									props.navbar
 										? "cursor-pointer border p-2 rounded bg-blue-900 hover:bg-blue-700"
@@ -386,12 +460,15 @@ const Navbar = props => {
 	return (
 		<>
 			{" "}
+
+			<TrackModal modalopen={modalopen} close={() => setmodalOpen(false)} transaction={transaction} />
 			<RatesModal openmodal={open} close={() => setOpen(false)} />
 			<div className="">
 				<MainNav />
 			</div>
 		</>
 	);
-};
+
+}
 
 export default Navbar;

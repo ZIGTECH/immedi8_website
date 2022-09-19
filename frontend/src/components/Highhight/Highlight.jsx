@@ -4,6 +4,7 @@ import { MdBusinessCenter, MdOutlineMoney } from "react-icons/md";
 import { GoGlobe } from "react-icons/go";
 import { Boxes } from "../Boxes/Boxes";
 import { getProductsData1 } from "../../services/apiServices";
+import { Underline } from "../Underline";
 
 const iconStyle = {
 	size: "70px",
@@ -38,19 +39,10 @@ export const Highlight = () => {
 	const [product2, setproduct2] = useState([]);
 	const [product3, setproduct3] = useState([]);
 
-	const [product1img, setproduct1Img] = useState("");
 
 	const productData = async () => {
 		const data = await getProductsData1();
-		// console.log(
-		// 	"http://localhost:1337/api" +
-		// 		data.data[0].attributes.icon.data.attributes.url
-		// );
 
-		// setproduct1Img(
-		// 	"http://localhost:1337/api" +
-		// 		data.data[0].attributes.icon.data.attributes.url
-		// );
 		setproduct1(data.data[0].attributes);
 		setproduct2(data.data[1].attributes);
 		setproduct3(data.data[2].attributes);
@@ -62,11 +54,12 @@ export const Highlight = () => {
 
 	return (
 		<>
-			<div className="container mx-auto p-10 lg:p-20" id="highlight">
-				<h2 className="text-center text-blue-900 mb-10">
+			<div className="lg:container mx-auto p-10 md:p-5 md:w-[100%] lg:p-20" id="highlight">
+				<h2 className="text-center text-blue-900 mb-2">
 					Meet Our Products
 				</h2>
-				<div className="md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3 p-0">
+				<Underline />
+				<div className="md:grid md:grid-cols-3 md:gap-5 lg:grid-cols-3 p-0">
 					<Boxes
 						icon={<MdOutlineMoney size={84} />}
 						title={product1?.title}
