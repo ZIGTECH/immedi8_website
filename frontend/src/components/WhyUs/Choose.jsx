@@ -26,13 +26,13 @@ export const Choose = () => {
 	// Get Data
 	const chooseData = async () => {
 		const data = await getChooseData();
-		// console.log(data);
+		console.log(data);
 
-		setreliableTrans(data.data[0].attributes);
-		setinstant(data.data[1].attributes);
-		setsecure(data.data[2].attributes);
-		settracking(data.data[3].attributes);
-		setlowrates(data.data[4].attributes);
+		// setreliableTrans(data.data[0].attributes);
+		setinstant(data.data[0].attributes);
+		setsecure(data.data[1].attributes);
+		settracking(data.data[2].attributes);
+		setlowrates(data.data[3].attributes);
 	};
 
 	useEffect(() => {
@@ -53,7 +53,7 @@ export const Choose = () => {
 
 	return (
 		<>
-			<div className="container mx-auto ">
+			<div className="w-[90%] mx-auto">
 				<div className="p-14 lg:p-32 lg:pt-20">
 					<p
 						className="lg:mb-10 text-center lg:text-start text-2xl text-blue-700 mb-5 font-bold"
@@ -63,14 +63,14 @@ export const Choose = () => {
 					</p>
 
 					<div
-						className="md:grid md:grid-cols-2 md:gap-10 lg:grid-cols-3"
+						className="md:grid md:grid-cols-2 md:gap-5 lg:grid-cols-4"
 						data-aos="zoom-in-up"
 						data-aos-duration="3000">
-						<ChooseBoxes
+						{/* <ChooseBoxes
 							icon={reliable}
 							title={reliableTrans?.title}
 							content={reliableTrans?.content}
-						/>
+						/> */}
 						<ChooseBoxes
 							icon={instantcash}
 							title={instant?.title}

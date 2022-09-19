@@ -22,7 +22,7 @@ export const TestimonialSlider = ({ image, name, title, content }) => {
 				// key={i}
 				className="hover:bg-slate-100 lg:hover:scale-75 md:transform-none h-80 mb-32 lg:mb-32 p-5 shadow-xl mx-5 rounded-xl cursor-pointer">
 				<svg
-					class="h-12 mx-auto mt-5 mb-3 text-gray-400 dark:text-gray-600"
+					class="h-12 mx-auto mt-5 mb-3 text-blue-400 dark:text-gray-600"
 					viewBox="0 0 24 27"
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg">
@@ -37,11 +37,11 @@ export const TestimonialSlider = ({ image, name, title, content }) => {
 						data-aos="zoom-in-left" data-aos-duration="3000"
 						src={image}
 						alt={name}
-						className="lg:w-[100px] w-[80px] mx-auto rounded-[50%]"
+						className="lg:w-[120px] w-[80px] mx-auto rounded-[50%]"
 					/>
 				</div>
 				<div className="text-center"
-					data-aos="fade-up" data-aos-duration="1500"
+					data-aos="slide-up" data-aos-duration="1500"
 				>
 					<span className="font-extrabold mb-3">{name}</span>
 					<p className="mb-20 font-sans">{title}</p>

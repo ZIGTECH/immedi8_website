@@ -12,6 +12,7 @@ const style = {
 
 const Header = () => {
 	const [navbar, setNavbar] = useState(false);
+	const [getview, setGetView] = useState(false);
 
 	const changeNavbarColor = () => {
 		if (window.scrollY >= 80) {
@@ -41,7 +42,7 @@ const Header = () => {
 				<nav
 					className={
 						navbar
-							? "main__navbar active bg-red-700 font-extrabold fixed top-0 w-full header z-50 h-40 text-black shadow-lg"
+							? "main__navbar active bg-red-700 font-extrabold fixed top-0 w-full header z-50 h-36 text-black shadow-lg"
 							: " fixed top-0 w-full header z-50 p-5"
 					}>
 					<div
@@ -56,11 +57,11 @@ const Header = () => {
 									? "main__navbar active container mx-auto text-black"
 									: "container mx-auto"
 							}>
-							<Navbar navbar={navbar} />
+							<Navbar view={getview} setView={(e) => setGetView(e)} navbar={navbar} />
 						</div>
 					</div>
 				</nav>
-				<HeroSection />
+				<HeroSection setView={getview} />
 			</header>
 		</>
 	);

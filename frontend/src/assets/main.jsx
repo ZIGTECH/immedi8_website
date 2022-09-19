@@ -23,6 +23,11 @@ import cashCollection from "./images/cashCollection.jpeg";
 import AppStore from "./images/AppStore.png";
 import GooglePlay from "./images/GooglePlay.png";
 import kjaw1 from "./images/kjaw1.jpeg";
+import app from "./images/app.png";
+import iapp from "./images/iapp.jpeg";
+import SaulFrazer from "./images/SaulFrazer.jpg";
+import kaku from "./images/kaku.jpeg";
+import imoneyApp from "./images/imoneyApp.jpeg";
 import bankLogo from "./images/bankLogo.jpeg";
 import banner1 from "./images/bannerImages/banner1.jpeg";
 import banner2 from "./images/bannerImages/banner2.jpeg";
@@ -76,4 +81,9 @@ export {
 	GooglePlay,
 	AppStore,
 	kjaw1,
+	imoneyApp,
+	app,
+	iapp,
+	SaulFrazer,
+	kaku,
 };

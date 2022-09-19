@@ -5,12 +5,11 @@ import { Footer } from "../../components/Footer/Footer";
 import Maps from "../../components/GoogleMaps/Maps";
 import Header from "../../components/Header/Header";
 import { Highlight } from "../../components/Highhight/Highlight";
-import { Newsletter } from "../../components/Newsletter/Newsletter";
 import { Policy } from "../../components/Policy/Policy";
-import { Products } from "../../components/Products/Products";
 import { Regulators } from "../../components/Regulators/Regulators";
 import { Services } from "../../components/Services/Services";
 import { Testimonials } from "../../components/Testimonials/Testimonials";
+import { DownloadApp } from "../../components/DownloadApp/DownloadApp";
 import { Choose } from "../../components/WhyUs/Choose";
 import { Banner } from "../../components/Banner/Banner";
 import logo from "../../assets/images/logo.png";
@@ -50,9 +49,9 @@ export const Home = () => {
 			/>
 
 			<Header />
-			<section>
+			{/* <section>
 				<Banner />
-			</section>
+			</section> */}
 			<section className="bg-slate-200">
 				<Highlight />
 			</section>
@@ -83,6 +82,9 @@ export const Home = () => {
 			</section>
 			<section>
 				<Policy />
+			</section>
+			<section>
+				<DownloadApp />
 			</section>
 			<section>
 				<Footer />
