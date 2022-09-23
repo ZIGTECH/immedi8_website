@@ -20,7 +20,7 @@ export const TestimonialSlider = ({ image, name, title, content }) => {
 		<>
 			<div
 				// key={i}
-				className="hover:bg-slate-100 lg:hover:scale-75 md:transform-none h-80 mb-32 lg:mb-32 p-5 shadow-xl mx-5 rounded-xl cursor-pointer">
+				className="bg-white hover:bg-slate-100 lg:hover:scale-75 md:transform-none h-80 mb-32 lg:mb-32 p-5 shadow-xl mx-5 rounded-xl cursor-pointer">
 				<svg
 					class="h-12 mx-auto mt-5 mb-3 text-blue-400 dark:text-gray-600"
 					viewBox="0 0 24 27"
@@ -32,7 +32,7 @@ export const TestimonialSlider = ({ image, name, title, content }) => {
 					/>
 				</svg>
 				<p className="text-center lg:mb-10">{content}</p>
-				<div className="mt-5 md:mt-0 lg:mb-2 lg:mt-10">
+				<div className="mt-14 md:mt-5 lg:mb-2 lg:mt-10">
 					<img
 						data-aos="zoom-in-left" data-aos-duration="3000"
 						src={image}

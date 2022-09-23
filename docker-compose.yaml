@@ -1,0 +1,47 @@
+version: "2.11.1"
+services:
+    frontend:
+        build: ./frontend
+        container_name: immedi8_frontend
+        ports:
+            - "3000:3000"
+        # volumes:
+        #     - ./frontend:/app
+        #     - ./app/node_modules
+        stdin_open: true
+        tty: true
+
+    backend:
+        image: strapi/base
+        container_name: immedi8_backend
+        ports:
+            - "1337:1337"
+        volumes:
+            - ./app:/srv/app
+
+    # mysql:
+    #     image: mysql
+    #     container_name: immedi8_mysql
+    #     # command: --default-authentication-plugin=mysql_native_password
+    #     # restart: always
+    #     volumes:
+    #         - ./data:/var/lib/mysql
+    # ports:
+    #     - "3306:3306"
+    # networks:
+    #     - immedi8_backend_network
+    # environment:
+    #     MYSQL_ROOT_PASSWORD: $$(MYSQL_ROOT_PASSWORD)
+# networks:
+#     immedi8_backend_network:
+#         driver:
+#             bridge
+
+# MYSQL_DATABASE: immedi8_DB
+# MYSQL_USER: admin
+# MYSQL_PASSWORD: password
+
+# MYSQL_ROOT_PASSWORD: strapi
+# MYSQL_DATABASE: strapi
+# MYSQL_USER: strapi
+# MYSQL_PASSWORD: strapi

@@ -118,13 +118,13 @@ export const About = () => {
 							{title ?? title}
 						</p>
 						<h2
-							className="text-center lg:text-start mb-5 md:mb-7"
+							className="text-center text-gray-700 lg:text-start mb-5 md:mb-7"
 							data-aos="fade-up"
 							data-aos-duration="3000">
 							{subtitle ?? subtitle}
 						</h2>
 						<p
-							className="text-justify tracking-wide leading-relaxed"
+							className="text-justify  tracking-wide leading-relaxed"
 							data-aos="fade-right"
 							data-aos-duration="3000">
 							{content1 ?? content1}

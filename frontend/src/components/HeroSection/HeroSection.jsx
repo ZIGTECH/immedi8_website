@@ -153,9 +153,10 @@ const HeroSection = props => {
 								{/* Form */}
 
 								{props.setView ? (
-									<div class="absolute hidden lg:block top:96 lg:top-0 lg:left-full md:z-50 p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+									<div class="absolute hidden lg:block top:96 lg:top-0 lg:left-full md:z-50 w-full max-w-sm bg-whitet rounded-lg border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
 										{showResult ? (
 											<div
+												className="w-full p-5 bg-white"
 												data-aos="fade"
 												data-aos-duration="3000">
 												<h4 className="text-center border-b-2 font-extrabold">
@@ -185,7 +186,7 @@ const HeroSection = props => {
 														<p>Exchange Rate:</p>
 														<span className="text-extrabold">
 															{
-																calculatedData?.Servicefee
+																calculatedData?.ExchangeRate
 															}
 														</span>
 													</div>
@@ -194,7 +195,7 @@ const HeroSection = props => {
 														<p>Service Fee:</p>
 														<span className="text-extrabold">
 															{
-																calculatedData?.ExchangeRate
+																calculatedData?.Servicefee
 															}
 														</span>
 													</div>
@@ -241,7 +242,7 @@ const HeroSection = props => {
 										) : (
 											<form
 												onSubmit={handleSubmit}
-												class="space-y-6 h-2/4"
+												class="space-y-6 h-2/4 p-5"
 												data-aos="fade" data-aos-duration="3000"
 												action="#"
 												style={{

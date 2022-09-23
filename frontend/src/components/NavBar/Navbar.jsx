@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { Link as L } from "react-router-dom";
 import { toast } from "react-toastify";
 import logo from "../../assets/images/logo.png";
 import { getTrackTransaction } from "../../services/apiServices";
@@ -441,15 +442,18 @@ export const Child = (props) => {
 								className="cursor-pointer border p-2 rounded bg-blue-900 hover:bg-blue-700">
 								Calculate
 							</Link>
-							<Link
-								to="https://imoney.immedi8money.com"
+							{/* <L> */}
+							<a href="https://iremitcli.zigtech.net" target="_blank"
 								className={
 									props.navbar
 										? "cursor-pointer border p-2 rounded bg-blue-900 hover:bg-blue-700"
 										: "cursor-pointer border p-2 rounded bg-red-900 hover:bg-red-700"
-								}>
+								}
+							>
+
 								Send Money
-							</Link>
+							</a>
+							{/* </L> */}
 						</div>
 					</div>
 				</div>

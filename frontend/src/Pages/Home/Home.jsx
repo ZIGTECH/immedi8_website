@@ -17,7 +17,10 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 import FloatingWhatsApp from "react-floating-whatsapp";
 
 const serviceStyle = {
-	background: "#222121",
+	// background: "#222121",
+	background: "linear-gradient(90deg, #1CB5E0 0 %, #000851 100 %)"
+
+
 };
 const highlightStyle = {
 	background: "#eef4ed",
@@ -52,22 +55,24 @@ export const Home = () => {
 			{/* <section>
 				<Banner />
 			</section> */}
-			<section className="bg-slate-200">
+			<section className="bg-slate-100">
 				<Highlight />
 			</section>
 			<section className="container mx-auto mt-10 md:mt-20">
 				<About />
 			</section>
-			<section style={serviceStyle} className="mt-10 md:mt-20">
+			<section className="mt-10 bg-slate-100 md:mt-20">
 				<Services />
 			</section>
+			{/* style={{ background: `linear-gradient(90deg, #1CB5E0 0%, #000851 100%)` }} */}
+
 			{/* <section>
 				<Products />
 			</section> */}
-			<section className="bg-slate-200">
+			<section className="">
 				<Choose />
 			</section>
-			<section className="mt-10 md:mt-20">
+			<section className="mt-10 bg-slate-100 md:mt-20">
 				<Testimonials />
 			</section>
 			<section style={contactStyle}>
