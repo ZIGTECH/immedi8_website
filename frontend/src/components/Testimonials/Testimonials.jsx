@@ -99,7 +99,7 @@ export const Testimonials = () => {
 						data-aos="zoom-in-down"
 						data-aos-easing="ease-in-out"
 						data-aos-duration="3000">
-						<h2 className="font-bold">
+						<h2 className="font-bold text-gray-700">
 							What Our Clients says About <br /> Immedi8 Finance.
 						</h2>
 					</div>
@@ -107,7 +107,7 @@ export const Testimonials = () => {
 					{/*  */}
 					<div data-aos="slide-left" data-aos-duration="2000"
 						data-aos-easing="ease-in-out">
-						<p className="text-center">
+						<p className="text-center text-gray-700">
 							We became the preferred choice for our customers because we emphasized reliability, affordability, and prompt delivery of transactions at the core of our services.
 						</p>
 					</div>

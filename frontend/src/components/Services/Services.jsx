@@ -11,6 +11,7 @@ import {
 	paymentService,
 	cashCollection,
 	bankLogo,
+	SaulFrazer
 } from "../../assets/main";
 import { ServiceBox } from "../ServiceBox/ServiceBox";
 import { getServiceData } from "../../services/apiServices";
@@ -77,7 +78,7 @@ export const Services = () => {
 						className="text-center lg:text-start mb-5"
 						data-aos="zoom-in-down"
 						data-aos-duration="3000">
-						<h2 className="font-bold">
+						<h2 className="font-bold text-gray-700">
 							We Ensure Best Financial <br /> Service For Our
 							Client.
 						</h2>
@@ -85,7 +86,7 @@ export const Services = () => {
 
 					{/*  */}
 					<div data-aos="zoom-in-up" data-aos-duration="3000">
-						<p className="text-justify  md:text-xl">
+						<p className="text-justify text-gray-700  md:text-xl">
 							{title?.content}
 						</p>
 					</div>

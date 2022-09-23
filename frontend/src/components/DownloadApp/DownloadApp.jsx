@@ -31,7 +31,7 @@ export const DownloadApp = () => {
                 <div className="lg:grid lg:grid-cols-2 gap-5">
                     <div className="p-10">
                         <div
-                            className=""
+                            className="text-center lg:text-start"
                             data-aos="fade-right"
                             data-aos-easing="linear"
                             data-aos-duration="1000">
@@ -64,7 +64,7 @@ export const DownloadApp = () => {
                     </div>
 
                     <div
-                        className="w-60 flex bg-slate-50 rounded-sm p-5"
+                        className="hidden md:w-60 md:flex border rounded-sm"
                         data-aos="zoom-out-left"
                         data-aos-easing="linear"
                         data-aos-duration="2000">
